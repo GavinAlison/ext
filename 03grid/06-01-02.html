@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>03.grid</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="localXHR.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+
+
+            var cm = new Ext.grid.ColumnModel([
+                new Ext.grid.RowNumberer(),
+                {header: 'id', dataIndex: 'name'},
+                {header: 'sex', dataIndex: 'sex'},
+                {header: 'name', dataIndex: 'color'},
+                {header: 'descn', dataIndex: 'descn'}
+            ]);
+            var PersonRecord = Ext.data.Record.create([
+                {name: 'id', type: 'int'},
+                {name: 'sex', type: 'string'},
+                {name: 'name', type: 'string'},
+                {name: 'descn', type: 'string'}
+            ]);
+            var data = [
+                ['1','male','name1','descn1'],
+                ['2','female','name2','descn2'],
+                ['3','male','name3','descn3'],
+                ['4','female','name4','descn4'],
+                ['5','male','name5','descn5']
+            ];
+            var store = new Ext.data.Store({
+                proxy: new Ext.data.MemoryProxy(data),
+                reader: new Ext.data.ArrayReader({}, PersonRecord)
+            });
+            store.load();
+
+            var grid = new Ext.grid.GridPanel({
+                store: store,
+                autoHeight: true,
+                cm: cm,
+                renderTo: 'grid',
+                viewConfig: {
+                    forceFit: true
+                }
+            });
+            Ext.get('remove').on('click',function(){
+                store.remove(store.getAt(1));
+                grid.view.refresh();
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="grid"></div>
+<input type="button" value="删除第二行" id="remove"/>
+</body>
+</html>

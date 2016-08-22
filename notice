@@ -1,0 +1,45 @@
+BoxComponent
+Panel
+TabPanel
+
+
+
+
+
+
+
+------
+英文
+---
+{
+toggle:切换
+region:地域
+collapsible:可折叠的
+autoScroll:自动滚动
+split:分开
+titlebar:标题栏
+tools:工具
+containerScroll:滚动集合
+plain:清晰的
+modal:模式的
+strict:严格的
+layout:布局
+items:所有条目的数组, 条
+panel:面版
+absolute:绝对的
+relative:相对的
+disabled:使无效
+anchor:使稳固
+accordion:可折叠的
+triggerAction:触发器动作
+stripeRows:条纹行
+refactor: 重构
+singSelect: 选择单行
+RowSelectionModel:行选择器
+CellSelectionModel:单元格选择器
+column:列
+row:行
+
+}
+----------------------
+

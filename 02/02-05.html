@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TabPanel</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all.js"></script>
+</head>
+<body>
+<script>
+    var tabs = new Ext.TabPanel({
+        renderTo: document.body,
+        height: 100
+    });
+    tabs.add({
+        title: '标题1',
+        html: '内容1'
+    },{
+        id: Ext.id(),
+        title: '标题2',
+        html: '内容2',
+        closable: true
+    });
+    tabs.activate(1);
+</script>
+</body>
+</html>

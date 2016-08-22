@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>02.basic</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css" />
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            var box = new Ext.Panel({
+                el: 'test',
+                title: '测试标题',
+                floating: true,
+                shadow: true,
+                draggable: true,
+                collapsible: true,
+                html: '测试内容',
+                pageX: 100,
+                pageY: 50,
+                width: 200,
+                height: 150,
+				//animCollapse: true,
+				//applyTo:'test',
+				//autoDestroy: true,
+				//autoLoad: true,
+				//autoScroll: true,
+				//bodyBorder: false,
+				//border: true, 
+            });
+            box.render(); 
+            
+			new Ext.Panel({
+				title: 'Drag me',
+				x: 100,
+				y: 100,
+				renderTo: Ext.getBody(),
+				floating: true,
+				frame: true,
+				width: 400,
+				height: 200,
+				draggable: {
+				//Config option of Ext.Panel.DD class.
+				//It&#39;s a floating Panel, so do not //show a placeholder proxy in the //original position.
+					insertProxy: false,
+
+//Called for each mousemove event while dragging the DD object.
+					onDrag : function(e){
+//          Record the x,y position of the drag proxy so that we can
+//          position the Panel at end of drag.
+						var pel = this.proxy.getEl();
+						this.x = pel.getLeft(true);
+						this.y = pel.getTop(true);
+
+	//          Keep the Shadow aligned if there is one.
+						var s = this.panel.getEl().shadow;
+						if (s) {
+							s.realign(this.x, this.y, pel.getWidth(), pel.getHeight());
+						}
+					}, 
+//      Called on the mouseup event.
+					endDrag: function(e){
+						this.panel.setPosition(this.x, this.y);
+					}
+				}
+			}).show();
+
+        });     
+                
+    
+</script>
+  </head>
+  <body>
+    <div id="test"></div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css" />
+<script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+<title>window 弹出框</title>
+<script type="text/javascript">
+Ext.onReady(function(){
+	Ext.MessageBox.alert('biaoti','neirong',function(btn){
+		alert('you onclick '+btn);
+	});
+ 
+	Ext.MessageBox.confirm("selected","yes or no?",function(btn){
+		alert('you click '+btn);
+	}); 
+	Ext.MessageBox.prompt('input','随便写入一些东西!',function(btn,text){
+		alert('you click '+btn+', value text = '+text);
+	});
+	Ext.MessageBox.show({
+		title: '多方输入框',
+		msg: '你可以输入多行!',
+		width: 300,
+		buttons: Ext.MessageBox.YESNO,
+		multiline :true,
+		fn : function(btn, text){
+			alert('you click '+btn+', text = '+text);
+		}
+	});
+	Ext.MessageBox.show({
+		title: '随便按个按钮',
+		msg: '选择一个', 
+		buttons:Ext.MessageBox.YESNOCANCEL,
+		fn: function(btn){
+			alert("you click "+btn);
+		}
+	});
+	Ext.MessageBox.show({
+		title:'wait',
+		msg:'load ...',
+		width: 250,
+		progress: true,
+		closable: false
+	});
+ 	var f = function(v){
+        return function(){
+            if(v == 11){
+                Ext.MessageBox.hide();
+            }else{
+                Ext.MessageBox.updateProgress(v/10, '正在读取第 ' +v+' 个，一共10个。');
+            }
+       };
+    };
+	for(var  i = 1 ; i<12;i++){
+		 setTimeout(f(i),i*1000);
+	}
+	 Ext.MessageBox.show({
+        title:'随便按个按钮',
+        msg: '从三个按钮里随便选择一个',
+        buttons: Ext.MessageBox.YESNOCANCEL,
+        fn: function(btn) {
+            alert('你刚刚点击了 ' + btn);
+        },
+		animEl:'dialog'
+    });
+	//Ext.MessageBox.progreess('wait',msg:'load ...');
+	
+});
+</script>
+</head>
+<body>
+ <div id="dialog">sssssssssss</div>
+</body>
+</html>

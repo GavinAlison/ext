@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>03.grid</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            var cm = new Ext.grid.ColumnModel([
+                {header: '编号', dataIndex: 'id'},
+                {header: '名称', dataIndex: 'name'},
+                {id:'descn',header: '描述', dataIndex: 'descn'}
+            ]);
+            var data = [
+                ['1', 'name1', 'descn1'],
+                ['2', 'name2', 'descn2'],
+                ['3', 'name3', 'descn3'],
+                ['4', 'name4', 'descn4'],
+                ['5', 'name5', 'descn5']
+            ];
+            var store = new Ext.data.Store({
+                proxy: new Ext.data.MemoryProxy(data),
+                reader: new Ext.data.ArrayReader({}, [
+                    {name: 'id'},
+                    {name: 'name'},
+                    {name: 'descn'}
+                ])
+            });
+            store.load();
+
+            var grid = new Ext.grid.GridPanel({
+                stripeRows: true,
+                loadMask: true,
+                autoExpandColumn: 'descn',
+                autoHeight: true,
+                renderTo: 'grid',
+                store: store,
+                cm: cm
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="grid"></div>
+</body>
+</html>

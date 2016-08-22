@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>03.grid</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="localXHR.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            function renderMotif(data, cell, record, rowIndex, columnIndex, store) {
+                var value = record.get("color");
+                cell.attr = 'style = background-color:' + value;
+                return data;
+            }
+
+            var cm = new Ext.grid.ColumnModel([
+                new Ext.grid.RowNumberer(),
+                {header: 'name', dataIndex: 'name'},
+                {header: 'sex', dataIndex: 'sex'},
+                {header: 'color', dataIndex: 'color', renderer: renderMotif}
+            ]);
+            var PersonRecord = Ext.data.Record.create([
+                {name: 'name', type: 'string'},
+                {name: 'sex', type: 'int'},
+                {name: 'color', type: 'string'}
+            ]);
+            var data = [
+                ['boy', 0, '#FBF8BF'],
+                ['girl', 1, '#99CC99'],
+                ['man', 0, '#F5C0C0'],
+                ['woman', 1, '#00ff00']
+            ];
+            var store = new Ext.data.Store({
+                proxy: new Ext.data.MemoryProxy(data),
+                reader: new Ext.data.ArrayReader({}, PersonRecord)
+            });
+            store.load();
+
+            var grid = new Ext.grid.GridPanel({
+                store: store,
+                cm: cm,
+                autoHeight: true,
+                renderTo: 'grid',
+                viewConfig: {
+                    forceFit: true
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="grid"></div>
+</body>
+</html>

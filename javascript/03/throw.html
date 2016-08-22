@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>throw</title>
+    <script>
+        function myFunction(){
+            try{
+                var c = document.getElementById("demo").value;
+                if(c == '') throw "value is null";
+                if(isNaN(c)) throw "value is not number";
+                if(c >10) throw "too upper";
+                if(c < 5) throw "too lower";
+            }catch(err){
+                document.getElementById("mess").innerHTML = "erro is"+err +".";
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>我的第一个 JavaScript</h1>
+<p>请输出一个 5 到 10 之间的数字:</p>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">测试输入</button>
+<p id="mess"></p>
+</body>
+</html>

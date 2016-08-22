@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>03.grid</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="localXHR.js"></script>
+    <style type="text/css" rel="stylesheet">
+        .white-row{background-color: white;}
+        .red-row{background-color:#F5C0C0 !important;  }
+        .yellow-row{ background-color: #FBF8BF !important; }
+        .green-row{ background-color: #99CC99 !important; }
+    </style>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            var PersonRecord = Ext.data.Record.create([
+                {name: 'name', type: 'string'},
+                {name: 'sex', type: 'int'},
+                {name: 'color', type: 'string'}
+            ]);
+            var data = [
+                ['boy', 0, '#FBF8BF'],
+                ['girl', 1, '#99CC99'],
+                ['man', 0, '#F5C0C0'],
+                ['woman', 1, '#FFFFFF']
+            ];
+            var store = new Ext.data.Store({
+                proxy: new Ext.data.MemoryProxy(data),
+                reader: new Ext.data.ArrayReader({}, PersonRecord)
+            });
+            store.load();
+
+            var grid = new Ext.grid.GridPanel({
+                store: store,
+                columns: [
+                    {header: 'name', dataIndex: 'name'},
+                    {header: 'sex', dataIndex: 'sex'}
+                ],
+                autoHeight: true,
+                renderTo: 'grid',
+                viewConfig: {
+                    forceFit: true,
+                    enableRowBody: true,
+                    getRowClass: function (record, rowIndex, p, ds) {
+                        var cls = 'white-row';
+                        switch (record.data.color) {
+                            case '#FBF8BF':
+                                cls = 'yellow-row';
+                                break;
+                            case '#99CC99':
+                                cls = 'green-row';
+                                break;
+                            case '#F5C0C0':
+                                cls = "red-row";
+                                break;
+                        }
+                        return cls;
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="grid"></div>
+</body>
+</html>

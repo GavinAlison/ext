@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+</head>
+<body>
+<script>
+    //对象初始化器方式
+    var person = {
+        name: 'huang', sex: 'man', age: '24', action: function () {
+            alert('I am eat!')
+        }
+    };
+    function ss(){
+       person.action();
+    }
+    //构造函数方式
+    function person1(name,age){
+        this.name= name;
+        this.age = age;
+        this.canFly =false;
+        var isChild = false;
+        person1.MAX_AGE  = 120;
+        this[1] = "ok";
+        function getNamelength(nameStr){
+            return nameStr.length;
+        }
+        this.namelength = getNamelength(this.name);
+        this.getName = getName;
+        this.setName = setName;
+        this.getName = function(newName){
+            this.name = newName;
+        }
+    }
+    person1.prototype.name1 = "person1";
+    person1.prototype.age = 24;
+//    person1.prototype
+    person1.prototype.getName = getName;
+    person1.prototype.setName = setName();
+    person1.prototype.setAge = function(name){
+        this.name = name;
+    };
+    function getName(){
+        return this.name;
+    }
+    function setName(name){
+        this.name=name;
+    }
+    person1.getMaxAge = function(){
+        return 200;
+    }
+</script>
+<input type="button"  value="click" onclick="ss();"/>
+</body>
+</html>

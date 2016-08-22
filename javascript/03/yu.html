@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+</head>
+<body>
+<script type="text/javascript">
+    var firstname;
+    function myFunction(){
+        var carName ="Volvo";
+        firstname = "john";//window.firstname
+    }
+    function showTime(){
+        document.getElementById("demo").innerHTML = Date();
+    }
+
+
+
+</script>
+<button onclick="showTime();">显示时间</button>
+<p id="demo"></p>
+
+<table>
+    <tr>
+        <td colspan="2">合并列</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr rowspan="2">
+    <td></td>
+</tr>
+    <tr></tr>
+    <tr></tr>
+</table>
+
+
+</body>
+</html>

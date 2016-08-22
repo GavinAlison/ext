@@ -1,0 +1,45 @@
+
+/* CSS Document */
+@charset "utf-8"
+body, div, ul, li {
+ 	font: 12px/22px "宋体",Arial,Helvetica,sans-serif;
+}
+
+ol,ul,li {
+	list-style:outside none none;
+}
+body {
+	background: #fff ;
+	color:#000000; 
+	text-align:center;
+	margin: 0px;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    color: #ba2636;
+}
+ul#nav {
+    background: #00a2ca;
+    height: 60px;
+    margin: 0 0;
+    width: 100%;
+}
+ul#nav li {
+    display: inline;
+    height: 60px;
+}
+ul#nav li a {
+    color: #fff;
+    display: inline-block;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+}
+ul#nav li a:hover {
+    background: #0095bb none repeat scroll 0 0;
+}

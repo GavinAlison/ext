@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>try_catch</title>
+</head>
+<body>
+<script>
+    var txt = "";
+    function message(){
+        try{
+            addlert("welcome geust!");
+        }catch(err){
+            txt = "happend error.\n\n";
+            txt+= "error description:"+err.message+"\n\n";
+            txt+= " click? \n\n";
+            alert(txt);
+        }
+    }
+</script>
+<input type="button" value="click" onclick="message();" />
+</body>
+</html>
