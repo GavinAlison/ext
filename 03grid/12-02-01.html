@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid PagingToolbar</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <style type="text/css">
+        /*#ext-gen70 {*/
+        /*width: 180px;*/
+        /*}*/
+    </style>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            var grid = new Ext.grid.PropertyGrid({
+                title: 'property grid',
+                autoHeight: true,
+                width: 300,
+                renderTo: 'grid',
+                viewConfig: {
+                    forceFit: true
+                },
+                source: {
+                    '名字': '不告诉你',
+                    '创建时间': new Date(Date.parse('12/15/2007')),
+                    '是否有效': false,
+                    "版本号": 1.1,
+                    '描述': '恩，估计没啥可说的'
+                }
+            });
+            grid.on('beforeedit', function (e) {
+                e.cancel = true;
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+<script type="text/javascript" src="examples.js"></script>
+<div id="grid"></div>
+<!--//注意，这里有个小问题，<img src="../../resources/images/default/s.gif",这是找不到的，正确的路径为-->
+<!--../extjs/resources/images/default/s.gif-->
+</body>
+</html>

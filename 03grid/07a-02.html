@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03.grid</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="localXHR.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function(){
+            var meta = [
+                {header: '编号', dataIndex: 'id', name: 'id'},
+                {header: '名称',  dataIndex: 'name', name: 'name'},
+                {header: '描述', dataIndex: 'descn', name: 'descn'},
+                {header: '日期',  dataIndex: 'date', name: 'date', type: 'date', dateFormat: 'Y-m-d', renderer: Ext.util.Format.dateRenderer('Y-m-d')}
+            ];
+            var data = [
+              ['1', 'name1', 'descn1', '1970-01-05'],
+              ['2', 'name2', 'descn2', '1970-01-05'],
+              ['3', 'name3', 'descn3', '1970-01-05'],
+              ['4', 'name4', 'descn4', '1970-01-05'],
+              ['5', 'name5', 'descn5', '1970-01-05'],
+              ['6', 'name6', 'descn6', '1970-01-05'],
+              ['7', 'name7', 'descn7', '1970-01-05'],
+              ['8', 'name8', 'descn8', '1970-01-05'],
+              ['9', 'name9', 'descn9', '1970-01-05'],
+              ['10', 'name10', 'descn10', '1970-01-05'],
+              ['11', 'name11', 'descn11', '1970-01-05'],
+              ['12', 'name12', 'descn12', '1970-01-05'],
+              ['13', 'name13', 'descn13', '1970-01-05'],
+              ['14', 'name14', 'descn14', '1970-01-05']
+            ];
+            var grid =new Ext.grid.GridPanel({
+                height: 100,
+                width: 500,
+                renderTo: 'grid',
+                store: new Ext.data.Store({
+                   autoLoad: true,
+                    proxy: new Ext.data.MemoryProxy(data),
+                    reader: new Ext.data.ArrayReader({}, meta)
+                }),
+                columns: meta
+            });
+            Ext.get('scroll').on('click', function(){
+                grid.getView().scrollToTop();
+            });
+            Ext.get('focus').on('click', function(){
+                grid.getView().focusCell(0, 0);
+                var cell = grid.getView().getCell(0, 1);
+                cell.style.backgroundColor = 'red';
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <button id="scroll">scroll to top</button>
+    <button id="focus">focus cell</button>
+    <div id="grid"></div>
+</body>
+</html>

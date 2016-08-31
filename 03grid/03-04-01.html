@@ -8,6 +8,7 @@
     <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
     <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
     <script type="text/javascript">
+        //解决中文排序问题，重写Ext.fata.Store.prototype.applySort方法
         Ext.data.Store.prototype.applySort = function () {
             if (this.sortInfo && !this.remoteSort) {
                 var s = this.sortInfo, f = s.field;
@@ -55,9 +56,9 @@
                 stripeRows: true,
 //                loadMask: true,
                 viewConfig: {
-                    forceFit: true
+                    forceFit: true  //自动记录每列的宽度
                 },
-                autoExpandColumn: 'descn',
+                autoExpandColumn: 'descn',//指定列的宽度自动伸展
                 autoHeight: true,
                 renderTo: 'grid',
                 store: store,

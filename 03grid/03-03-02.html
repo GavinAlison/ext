@@ -12,7 +12,7 @@
             var cm = new Ext.grid.ColumnModel([
                 {header: '编号', dataIndex: 'id'},
                 {header: '名称', dataIndex: 'name'},
-                {id:'descn',header: '描述', dataIndex: 'descn'}
+                {header: '描述', dataIndex: 'descn'}
             ]);
             var data = [
                 ['1', 'name1', 'descn1'],
@@ -22,24 +22,25 @@
                 ['5', 'name5', 'descn5']
             ];
             var store = new Ext.data.Store({
-                proxy: new Ext.data.MemoryProxy(data),
+                proxy: new Ext.data.ScriptTagProxy({ url:'http://www.family168.com/data.json'}),//远程读取数据对象
                 reader: new Ext.data.ArrayReader({}, [
                     {name: 'id'},
                     {name: 'name'},
                     {name: 'descn'}
                 ])
             });
-            store.load();
+
 
             var grid = new Ext.grid.GridPanel({
                 stripeRows: true,
-                loadMask: true,
-                autoExpandColumn: 'descn',
+                loadMask: true,//显示加载的图片   loading...
                 autoHeight: true,
                 renderTo: 'grid',
                 store: store,
                 cm: cm
             });
+
+            store.load();
         });
     </script>
 </head>

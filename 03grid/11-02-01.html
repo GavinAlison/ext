@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid PagingToolbar</title>
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="localXHR.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            var cm = new Ext.grid.ColumnModel([
+                {
+                    header: '编号',
+                    dataIndex: 'id',
+                    editor: new Ext.grid.GridEditor(
+                            new Ext.form.TextField({
+                                allowBlank: false
+                            })
+                    )
+                }, {
+                    header: '名称',
+                    dataIndex: 'name',
+                    editor: new Ext.grid.GridEditor(
+                            new Ext.form.TextField({
+                                allowBlank: false
+                            })
+                    )
+                }, {
+                    header: '描述',
+                    dataIndex: 'descn',
+                    editor: new Ext.grid.GridEditor(
+                            new Ext.form.TextField({
+                                allowBlank: false
+                            })
+                    )
+                }
+            ]);
+            var data = [
+                ['1', 'name1', 'descn1'],
+                ['2', 'name2', 'descn2'],
+                ['3', 'name3', 'descn3'],
+                ['4', 'name4', 'descn4'],
+                ['5', 'name5', 'descn5']
+            ];
+            var store = new Ext.data.Store({
+                proxy: new Ext.data.MemoryProxy(data),
+                reader: new Ext.data.ArrayReader({}, [
+                    {name: 'id'},
+                    {name: 'name'},
+                    {name: 'descn'}
+                ])
+            });
+            var Record = new Ext.data.Record.create([
+                {name: 'id', type: 'string'},
+                {name: 'name', type: 'string'},
+                {name: 'descn', type: 'string'}
+
+            ]);
+            var grid = new Ext.grid.EditorGridPanel({
+                renderTo: 'grid',
+                autoHeight: true,
+                width: 500,
+                store: store,
+                cm: cm,
+                tbar: new Ext.Toolbar([
+                    '-', {
+                        text: 'add',
+                        handler: function () {
+                            var p = new Record({
+                                id: '',
+                                name: '',
+                                descn: ''
+                            });
+                            grid.stopEditing();
+                            store.insert(0, p);
+                            grid.startEditing(0, 0);
+                        }
+                    }, '-', {
+                        text: 'del',
+                        handler: function () {
+                            Ext.Msg.confirm('信息', '确定要删除?', function (btn) {
+                                if (btn == 'yes') {
+                                    var sm = grid.getSelectionModel();
+                                    var cell = sm.getSelectedCell();
+                                    var record = store.getAt(cell[0]);
+                                    store.remove(record);
+                                }
+                            });
+                        }
+                    }
+                ])
+            });
+            store.load();
+        });
+
+    </script>
+</head>
+<body>
+<script type="text/javascript" src="examples.js"></script>
+<div id="grid"></div>
+</body>
+</html>

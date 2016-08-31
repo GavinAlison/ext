@@ -1,18 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>03.grid</title>
+    <meta charset="UTF-8">
+    <title>grid PagingToolbar</title>
     <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
     <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
     <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="localXHR.js"></script>
     <script type="text/javascript">
         Ext.onReady(function () {
             var cm = new Ext.grid.ColumnModel([
                 {header: '编号', dataIndex: 'id'},
                 {header: '名称', dataIndex: 'name'},
-                {id:'descn',header: '描述', dataIndex: 'descn'}
+                {header: '描述', dataIndex: 'descn'}
             ]);
             var data = [
                 ['1', 'name1', 'descn1'],
@@ -29,21 +29,23 @@
                     {name: 'descn'}
                 ])
             });
-            store.load();
-
             var grid = new Ext.grid.GridPanel({
-                stripeRows: true,
-                loadMask: true,
-                autoExpandColumn: 'descn',
-                autoHeight: true,
                 renderTo: 'grid',
+                autoHeight: true,
                 store: store,
-                cm: cm
+                cm: cm,
+                tbar: new Ext.PagingToolbar({
+                    pageSize: 10,
+                    store: store,
+                    displayInfo: true,
+                    displayMsg: '显示第{0}条到{1}条记录，一共{2}条',
+                    emptyMsg: '没有记录'
+                })
             });
+            store.load();
         });
     </script>
 </head>
-
 <body>
 <div id="grid"></div>
 </body>

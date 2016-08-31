@@ -10,11 +10,11 @@
     <script type="text/javascript" src="localXHR.js"></script>
     <script type="text/javascript">
         Ext.onReady(function () {
-
+            //多选按钮
             var sm = new Ext.grid.CheckboxSelectionModel();
             var cm = new Ext.grid.ColumnModel([
                 new Ext.grid.RowNumberer(),
-                sm,
+                sm,//这个需要
                 {header: 'id', dataIndex: 'name'},
                 {header: 'sex', dataIndex: 'sex'},
                 {header: 'name', dataIndex: 'color'},
@@ -43,7 +43,7 @@
                 store: store,
                 autoHeight: true,
                 cm: cm,
-                sm: sm,
+                sm: sm,//这里也需要
                 renderTo: 'grid',
                 viewConfig: {
                     forceFit: true

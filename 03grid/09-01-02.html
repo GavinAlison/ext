@@ -1,26 +1,42 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8">
     <title>03.grid</title>
     <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
     <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
     <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="localXHR.js"></script>
+    <style type="text/css">
+        .pageStyle {
+            float: right;
+            width: 400px;
+        }
+    </style>
+
     <script type="text/javascript">
         Ext.onReady(function () {
+
             var cm = new Ext.grid.ColumnModel([
                 {header: '编号', dataIndex: 'id'},
                 {header: '名称', dataIndex: 'name'},
-                {id:'descn',header: '描述', dataIndex: 'descn'}
+                {header: '描述', dataIndex: 'descn'}
             ]);
+
             var data = [
+                ['1', 'name1', 'descn1'],
+                ['2', 'name2', 'descn2'],
+                ['3', 'name3', 'descn3'],
+                ['4', 'name4', 'descn4'],
+                ['5', 'name5', 'descn5'],
                 ['1', 'name1', 'descn1'],
                 ['2', 'name2', 'descn2'],
                 ['3', 'name3', 'descn3'],
                 ['4', 'name4', 'descn4'],
                 ['5', 'name5', 'descn5']
             ];
+
+
             var store = new Ext.data.Store({
                 proxy: new Ext.data.MemoryProxy(data),
                 reader: new Ext.data.ArrayReader({}, [
@@ -28,23 +44,29 @@
                     {name: 'name'},
                     {name: 'descn'}
                 ])
+
             });
-            store.load();
 
             var grid = new Ext.grid.GridPanel({
-                stripeRows: true,
-                loadMask: true,
-                autoExpandColumn: 'descn',
-                autoHeight: true,
                 renderTo: 'grid',
+                autoHeight: true,
                 store: store,
-                cm: cm
+                cm: cm,
+                bbar: new Ext.PagingToolbar({
+                    cls: 'pageStyle',
+                    pageSize: 10,
+                    store: store,
+                    displayInfo: true,//用于显示displayMsg的信息的
+                    displayMsg: '显示第 {0} 条到 {1} 条记录，一共 {2} 条',
+                    emptyMsg: "没有记录"
+                })
             });
+            store.load();
         });
     </script>
 </head>
-
 <body>
+<script type="text/javascript" src="examples.js"></script>
 <div id="grid"></div>
 </body>
 </html>

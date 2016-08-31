@@ -1,18 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>03.grid</title>
+    <meta charset="UTF-8">
+    <title>grid PagingToolbar</title>
     <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css"/>
     <script type="text/javascript" src="../extjs/adapter/ext/ext-base.js"></script>
     <script type="text/javascript" src="../extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="localXHR.js"></script>
+    <script type="text/javascript" src="PagingMemoryProxy.js"></script>
     <script type="text/javascript">
         Ext.onReady(function () {
             var cm = new Ext.grid.ColumnModel([
                 {header: '编号', dataIndex: 'id'},
                 {header: '名称', dataIndex: 'name'},
-                {id:'descn',header: '描述', dataIndex: 'descn'}
+                {header: '描述', dataIndex: 'descn'}
             ]);
             var data = [
                 ['1', 'name1', 'descn1'],
@@ -22,29 +23,34 @@
                 ['5', 'name5', 'descn5']
             ];
             var store = new Ext.data.Store({
-                proxy: new Ext.data.MemoryProxy(data),
+                proxy: new Ext.data.PagingMemoryProxy(data),//实现内存分页的功能，前台分页
                 reader: new Ext.data.ArrayReader({}, [
                     {name: 'id'},
                     {name: 'name'},
                     {name: 'descn'}
                 ])
             });
-            store.load();
-
             var grid = new Ext.grid.GridPanel({
-                stripeRows: true,
-                loadMask: true,
-                autoExpandColumn: 'descn',
-                autoHeight: true,
                 renderTo: 'grid',
+                autoHeight: true,
+                width: 500,
                 store: store,
-                cm: cm
+                cm: cm,
+                bbar: new Ext.PagingToolbar({
+                    pageSize: 3,
+                    store: store,
+                    displayInfo: true,
+                    displayMsg: '显示第 {0} 条到 {1} 条记录，一共 {2} 条',//这里有点问题，{0}  {1}  {2}
+                    emptyMsg: '没有记录'
+                })
             });
+            store.load({params: {start: 0, limit: 3}});
         });
     </script>
 </head>
-
 <body>
+
+
 <div id="grid"></div>
 </body>
 </html>
