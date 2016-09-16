@@ -1,10 +1,12 @@
 /**
  * Created by Administrator on 2016/9/12.
  */
-function showPic(whichPic){
+function showPic(whichpic) {
+    var source = whichpic.getAttribute("href");
     var placeholder = document.getElementById("placeholder");
-    var source = whichPic.getAttribute("href");
-    placeholder.setAttribute("src", source);
-    return false;
+    placeholder.setAttribute("src",source);
+    var text = whichpic.getAttribute("title");
+    var description = document.getElementById("description");
+    description.firstChild.nodeValue = text;
 }
 
