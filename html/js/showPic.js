@@ -10,3 +10,5 @@ function showPic(whichpic) {
     description.firstChild.nodeValue = text;
 }
 
+// window.onload = showPic(this);
+
