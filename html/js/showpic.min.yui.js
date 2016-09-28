@@ -1,0 +1,1 @@
+function showPic(a){var c=a.getAttribute("href");var e=document.getElementById("placeholder");e.setAttribute("src",c);var d=a.getAttribute("title");var b=document.getElementById("description");b.firstChild.nodeValue=d};
