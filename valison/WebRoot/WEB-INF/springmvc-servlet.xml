@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+	<!-- scan  -->
+	<context:component-scan base-package="com.alison" />
+	<!-- annotation -->  
+	<mvc:annotation-driven />
+	<!--  注入的bean -->
+<!--	<bean name="/hello.dd"  class="com.alison.controller.HelloController"> </bean>-->
+	
+	
+	<!-- handlerMapping -->
+<!--	<bean-->
+<!--		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>-->
+	<!-- handlerAdapter -->
+<!--	<bean -->
+<!--		class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>-->
+	<!--  viewResolver -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+		    <property name="prefix" value="/WEB-INF/classes/" />
+		    <!--可为空,方便实现自已的依据扩展名来选择视图解释类的逻辑  -->
+		    <property name="suffix" value=""/>
+
+
+	
+	</bean>
+</beans>
