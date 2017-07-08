@@ -10,9 +10,9 @@ ol,ul,li {
 }
 body {
 	background: #fff ;
-	color:#000000; 
+	color:#000000;
 	text-align:center;
-	margin: 0px;
+	margin: 0;
 }
 a {
     color: #000;
@@ -42,4 +42,7 @@ ul#nav li a {
 }
 ul#nav li a:hover {
     background: #0095bb none repeat scroll 0 0;
+}
+ul#nav{
+    position: fixed;
 }
