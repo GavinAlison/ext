@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script  type="text/javascript" src="jquery-3.1.0.js"></script>
+    <title></title>
+    <script>
+        function change(){
+            alert("onclick");
+        }
+        $(function(){
+            $("#btn4").click(function(){
+                $("#btn3").click();
+            });
+
+        });
+    </script>
+</head>
+<body>
+<button id="btn3" onclick="change()">dd</button>
+<button id="btn4">ee</button>
+</body>
+</html>

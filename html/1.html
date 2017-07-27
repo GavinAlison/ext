@@ -1,10 +1,24 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>无标题文档</title>
+    <script>
+      /*
+        function change(){
+            console.log(1);
+        }
+        */
+      $(function(){
+          $("#btn4").click(function(){
+              $("#btn3").click();
+          });
+      });
+      function change(){
+          alert("onclick");
+      }
+    </script>
 </head>
-
 <body>
 <h1>aaaaaaaa</h1>
 <p>bbbbbbbbbbbb</p>
@@ -13,10 +27,9 @@
 <br/>
 class id  style title
 <hr>
-<!-- 
 
--->
-
+<button id="btn3" onclick="change()">dd</button>
+<button id="btn4">ee</button>
 
 </body>
 </html>

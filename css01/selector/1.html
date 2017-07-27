@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css伪劣选择器</title>
+    <style>
+        ul {
+            width: 100%;
+        }
+
+        li {
+            display: inline;
+            padding: 2px 10px;
+        }
+
+        h2:first-child {
+            color: #f00;
+        }
+
+        p:last-child {
+           // color: yellow;
+        }
+
+        div h2 {
+        / / font-size: 100 px;
+        }
+
+        li:nth-child(2n+1) {
+        / / color: #f00;
+        }
+
+        /*li:nth-child(odd){}*/
+        /*li:nth-child(n)*/
+        /*li:nth-child(2n/2n+1)*/
+        li:nth-child(even) {
+            color: red;
+        }
+
+        /*li: link visited hover  active*/
+        li:hover {
+            background-color: #4d4d4d;
+        }
+
+        div {
+            display: block;
+        }
+
+        p {
+            display: inline;
+            padding: 2px 10px;
+        }
+
+        div.demo p:nth-last-child(1) {
+            background-color: #3e3e3e;
+        }
+
+        div.demo p:nth-last-child(2) {
+            background-color: #3e3e3e;
+            color: #fff;
+        }
+
+        div.demo p:first-of-type {
+            background-color: #ff0;
+        }
+        div.test p:first-of-type{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>biaoti</h2>
+    <p>duanluo</p>
+</div>
+<hr/>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<hr/>
+<div class="demo">
+    <p>1p</p>
+    <p>2p</p>
+    <span>3.1span</span>
+    <p>4.3p</p>
+    <span>5.2span</span>
+</div>
+<div class="test">
+    <div>我是一个div元素</div>
+    <p>我是一个p元素</p>
+    <p>我是一个p元素</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>目标伪类选择符 E:target_CSS参考手册_web前端开发参考手册系列</title>
+    <style type="text/css">
+        .span1 {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: #f00;
+            margin-top: 7px;
+        }
+
+        .test {
+            /*postition: static;*/
+            position: relative;
+            /*left: 20px;*/
+            background-color: #7cdfe9;
+            top: 32px;
+            left: 30px;
+        }
+
+        .nav {
+            margin-bottom: 7px;
+        }
+
+        .btn-search {
+            padding: 3px 10px;
+        }
+
+        .nav-search {
+            text-align: center;
+            width: 100%;
+            /*height: 40px;*/
+            position: fixed;
+            border: 1px solid #000;
+            background-color: #FFF;
+        }
+
+        body {
+            min-height: 700px;
+        }
+
+        .d2 {
+            position: center;
+            left: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="nav-search">
+    <div class="btn-search">搜索栏sssss</div>
+</div>
+<div class="test">
+    <div class="nav">块</div>
+    <div class="span1"><span>1111</span></div>
+</div>
+<div class="d2">
+    <a href="#">asd</a>
+</div>
+</body>
+</html>

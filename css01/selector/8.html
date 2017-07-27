@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>目标伪类选择符 E:target_CSS参考手册_web前端开发参考手册系列</title>
+    <style type="text/css">
+        div {
+            position: relative;
+            height: 40px;
+        }
+
+        .a {
+            /*display: none;*/ /*元素不占空间*/
+            /*visibility: hidden;!*元素占用空间*!*/
+            float: right;
+            background-color: #9c9c9c;
+        }
+
+        .b {
+            clear: right;
+            background-color: #00a2ca;
+        }
+    </style>
+</head>
+<body>
+<div class="a">我将出现在屏幕右方</div>
+<div class="b">注意我出现的位置</div>
+</body>
+</html>
