@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>test border研究css三三角形的形成</title>
+    <style type="text/css">
+        div {
+            margin-left: 20px;
+            display: inline-block;
+        }
+
+        .caret {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            vertical-align: top;
+            border-top: 4px solid #000;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+            content: "";
+        }
+
+        .ca1 {
+            width: 40px;
+            height: 40px;
+            border: 2px solid;
+            border-color: #91ff5b #BA55D3 #F4A460 #FF0000;
+        }
+
+        .ca2 {
+            width: 50px;
+            height: 50px;
+            border: 30px solid;
+            border-color: #91ff5b #BA55D3 #F4A460 #FF0000;
+        }
+
+        .ca3 {
+            width: 0;
+            height: 0;
+            border: 30px solid;
+            border-color: #91ff5b #BA55D3 #F4A460 #FF0000;
+        }
+
+        .ca4 {
+            width: 0;
+            height: 0;
+            border-top: 60px solid #91ff5b;
+            border-right: 60px solid #BA55D3;
+        }
+
+        .ca5 {
+            width: 30px;
+            height: 30px;
+            border-top: 60px solid #91ff5b;
+            border-right: 60px solid #BA55D3;
+        }
+
+        /*向下三角形*/
+        .ca6 {
+            width: 0;
+            height: 0;
+            border-top: 40px solid #91ff5b;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+        }
+
+        /*向左三角形*/
+        .ca7 {
+            width: 0;
+            height: 0;
+            border: 40px solid;
+            border-color: transparent #BA55D3 transparent transparent;
+        }
+
+        /*向上三角形*/
+        .ca8 {
+            width: 0;
+            height: 0;
+            border: 40px solid;
+            border-color: transparent transparent #F4A460 transparent;
+        }
+
+        /*向右三角形*/
+        .ca9 {
+            width: 0;
+            height: 0;
+            border: 40px solid;
+            border-color: transparent transparent transparent #FF0000;
+        }
+
+        .ca10 {
+            width: 0;
+            height: 0;
+            border-top: 40px solid #91ff5b;
+            border-left: 40px solid #FF0000;
+            border-right: 40px solid #BA55D3;
+            border-bottom: 40px solid transparent;
+        }
+
+        .ca11 {
+            width: 0;
+            height: 0;
+            border-top: 40px solid #91ff5b;
+            border-left: 40px solid #FF0000;
+            border-right: 40px solid #BA55D3;
+        }
+    </style>
+</head>
+<body>
+ceshi:
+<b class="caret"></b><br>
+<hr/>
+<div style="display: block;">
+    以下是研究border的原理:<br>
+    1. width和height设置了元素的长度与高;<br>
+    2. border: border-width || border-style || border-color<br>
+    3. border-width: 设置或检索对象边框的宽度<br>
+    4. border-style: 设置或检索对象边框的样式；<br>
+    5. border-color: 设置或检索对象边框的颜色；<br>
+    对象边框是以梯形形式存在的，当对象的width和height为0时，
+    每一边的边框会由梯形变成三角形.<br>
+    设计向下的三角形思路为：设计上左右的边框值，下边框不设计;<br>
+    这样的设计会把左右向下的边框切掉，
+    <pre>
+        border-top: 40px solid #f00;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+    </pre>
+    代码设计成如下，左右向下的边框不会切掉
+    <pre>
+        border-top: 40px solid #f00;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+    </pre>
+</div>
+<hr>
+<pre>
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    border-color: #91ff5b #BA55D3 #F4A460 #FF0000;
+</pre>
+<div class="ca1"></div>
+<hr/>
+<pre>
+    width: 50px;
+    height: 50px;
+    border: 30px solid;
+    border-color: #91ff5b #BA55D3 #F4A460 #FF0000;
+</pre>
+<div class="ca2"></div>
+<hr/>
+<pre>
+    width:  0;
+    height: 0;
+    border: 30px solid;
+    border-color: #91ff5b #BA55D3 #F4A460 #FF0000;
+</pre>
+<div class="ca3"></div>
+<hr/>
+<pre>
+    width: 0;
+    height: 0;
+    border-top: 60px solid #91ff5b;
+    border-right: 60px solid #BA55D3;
+</pre>
+<div class="ca4"></div>
+<hr/>
+<pre>
+    width: 30px;
+    height: 30px;
+    border-top: 60px solid #91ff5b;
+    border-right: 60px solid #BA55D3;
+</pre>
+<div class="ca5"></div>
+<hr/>
+<pre>
+    width: 0;
+    height: 0;
+    border-top: 40px solid #91ff5b;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+</pre>
+<div class="ca6"></div>
+<hr/>
+<pre>
+    width: 0;
+    height: 0;
+    border: 40px solid;
+    border-color: transparent transparent #F4A460 transparent;
+</pre>
+<div class="ca8"></div>
+<hr/>
+<pre>
+    width: 0;
+    height: 0;
+    border: 40px solid;
+    border-color: transparent #BA55D3 transparent transparent;
+</pre>
+<div class="ca7"></div>
+<hr/>
+<pre>
+    width: 0;
+    height: 0;
+    border: 40px solid;
+    border-color: transparent transparent transparent #FF0000;
+</pre>
+<div class="ca9"></div>
+<hr/>
+为了更好的体现向下的边框是否会被切掉，设计左右的边框颜色不为transpanrent<br>
+向下的边框不会被切掉
+<pre>
+    width: 0;
+    height: 0;
+    border-top: 40px solid #91ff5b;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+</pre>
+<div class="ca10"></div>
+<hr/>
+向下的边框会被切掉
+<pre>
+    width: 0;
+    height: 0;
+    border-top: 40px solid #91ff5b;
+    border-left: 40px solid #FF0000;
+    border-right: 40px solid #BA55D3;
+</pre>
+<div class="ca11"></div>
+<style type="text/css">
+    .demo {
+        display: block;
+        width: 200px;
+        line-height: 100px;
+        background-color: #fff;
+        position: relative;
+        border: 1px solid #5BBF5A;
+        text-align: center;
+        font-size: 25px;
+    }
+    .demo:after, .demo:before {
+        border: solid transparent;
+        content: '';
+        width: 0;
+        height:  0;
+        position: absolute;
+    }
+
+    .demo:after {
+        border-width: 10px;
+        border-top-color: #fff;
+        top: 100px;
+        left: 150px;
+    }
+
+    .demo:before {
+        border-width: 11px;
+        border-top-color: #5BBF5A;
+        top: 100px;
+        left: 149px;
+    }
+</style>
+<div class="demo">hello world!</div>
+</body>
+</html>

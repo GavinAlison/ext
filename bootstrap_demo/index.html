@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Unicorn Admin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="css/fullcalendar.css" />
-    <link rel="stylesheet" href="css/unicorn.main.css" />
-    <link rel="stylesheet" href="css/unicorn.grey.css" class="skin-color" />
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-</head>
-<body>
+    <head>
+        <title>Unicorn Admin</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" href="css/fullcalendar.css" />
+        <link rel="stylesheet" href="css/unicorn.main.css" />
+        <link rel="stylesheet" href="css/unicorn.grey.css" class="skin-color" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
     <!--头部导航的黑体样式 -->
+
     <div id="header">
         <!--h1下有背景图片，Unicorn Admin设置line-height: 600px; 字体看不到-->
         <h1><a href="./dashboard.html">Unicorn Admin</a></h1>
@@ -21,18 +22,90 @@
     <div id="search">
         <!--设置input样式, border-radius,padding,border , bgcolor-->
         <!--button设置成图样加上搜索点击，样式border-radius,padding, border,图标设置成14*14, opacity:0.5-->
-        <input type="text" placeholder="Search  here..."/><button type="submit" class="tip-right" title="Search"><i class="icon-search icon-white"></i></button>
+        <input type="text" placeholder="Search  here..."/>
+        <button type="submit" class="tip-right" title="Search"><i class="icon-search icon-white"></i></button>
     </div>
-
+    <!--导航栏的设置 ，一般为li>a>[i,span,span,b]-->
     <div id="user-nav" class="navbar navbar-inverse">
         <ul class="nav btn-group">
-            <li class="btn btn-inverse"><a title="" href="#"><i class="icon icon-user"></i><span  class="text">Profile</span></a></li>
+            <li class="btn btn-inverse">
+                <a title="" href="#"><i class="icon icon-user"></i>
+                    <span class="text">Profile</span></a>
+            </li>
+            <li class="btn btn-inverse dropdown" id="menu-messages">
+                <a title="" href="#" data-toggle="dropdown" data-target="#menu-messages"
+                   class="dropdown-toggle">
+                    <i class="icon icon-envelope"></i>
+                    <span class="text">Message</span>
+                    <span class="label label-important">5</span>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="sAdd" title="" href="#">new message</a></li>
+                    <li><a class="sInbox" title="" href="#">inbox</a></li>
+                    <li><a class="sOutbox" title="" href="#">outbox</a></li>
+                    <li><a class="sTrash" title="" href="#">trash</a></li>
+                </ul>
+            </li>
+            <li class="btn btn-inverse">
+                <a title="" href="#">
+                    <i class="icon icon-cog"></i>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+            <li class="btn btn-inverse">
+                    <a title="" href="login.html">
+                    <i class="icon icon-share-alt"></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--左侧导航栏-->
+    <div id="sidebar">
+        <a hre="#" class="visible-phone"><i class="icon icon-home"></i>Dashboard</a>
+        <ul>
+            <li class="active"><a href="index.html"><i class="icon icon-home"></i><span>Dashboard</span></a></li>
+            <li class="submenu">
+                <a href="#"><i class="icon icon-list"></i><span>Form elements</span> <span class="label">3</span></a>
+                <ul>
+                    <li><a href="form-common.html">Common elements</a></li>
+                    <li><a href="form-validation.html">Validation</a></li>
+                    <li><a href="form-wizard.html">Wizard</a></li>
+                </ul>
+            </li>
+            <li><a href="buttons.html"><i class="icon icon-tint"></i><span>Buttons & icons</span></a></li>
+            <li><a href="interface.html"><i class="icon icon-pencil"></i><span>Interface elements</span></a></li>
+            <li><a href="tables.html"><i class="icon icon-th"></i><span>Tables</span></a></li>
+            <li><a href="grid.html"><i class="icon icon-th-list"></i><span>Grid Layout</span></a></li>
+            <li class="submenu">
+                <a href="#" ><i class="icon icon-file"></i><span>Sample pages</span><span class="label">4</span></a>
+                <ul>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li><a href="chat.html">Support chat</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="charts.html" ><i class="icon icon-signal"></i><span>Charts & graphs</span></a>
+            </li>
+            <li>
+                <a href="widgets.html" ><i class="icon icon-inbox"></i><span>Widgets</span></a>
+            </li>
         </ul>
     </div>
 
 
-
-
-
-</body>
+    <script src="js/excanvas.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.ui.custom.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flot.min.js"></script>
+    <script src="js/jquery.flot.resize.min.js"></script>
+    <script src="js/jquery.peity.min.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/unicorn.js"></script>
+    <script src="js/unicorn.dashboard.js"></script>
+    </body>
 </html>
