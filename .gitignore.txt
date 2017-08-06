@@ -1,3 +1,4 @@
 /extjs/
 /.idea/
 /aspnet_client/
+workspace.xml
