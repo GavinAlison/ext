@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72491989-c87f-4fd4-8a2b-060952d44611" name="Default" comment="bootstrap面板2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap_demo/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap_demo/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap_demo/css/unicorn.main.css" afterPath="$PROJECT_DIR$/bootstrap_demo/css/unicorn.main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap_demo/index.html" afterPath="$PROJECT_DIR$/bootstrap_demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap_demo/login.html" afterPath="$PROJECT_DIR$/bootstrap_demo/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -122,6 +116,8 @@
         <option value="$PROJECT_DIR$/bootstrap_demo/login.html" />
         <option value="$PROJECT_DIR$/bootstrap_demo/demo.html" />
         <option value="$PROJECT_DIR$/bootstrap_demo/css/unicorn.main.css" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/.gitignore.txt" />
       </list>
     </option>
   </component>
@@ -147,7 +143,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -173,12 +169,6 @@
               <item name="ext" type="47feb1d3:ProjectViewModuleNode" />
               <item name="ext" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ext" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ext" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="ext" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap_demo" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -190,6 +180,11 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="ext" type="cbb8eebc:String" user="ext" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="ext" type="cbb8eebc:String" user="ext" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
             </path>
           </expand>
           <select />
@@ -310,7 +305,7 @@
       <workItem from="1501195197909" duration="108000" />
       <workItem from="1501687754860" duration="146000" />
       <workItem from="1501688632524" duration="2016000" />
-      <workItem from="1501984944894" duration="21835000" />
+      <workItem from="1501984944894" duration="22580000" />
     </task>
     <task id="LOCAL-00001" summary="配置环境变化！">
       <created>1498145062285</created>
@@ -319,11 +314,25 @@
       <option name="project" value="LOCAL" />
       <updated>1498145062285</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bootstrap面板2">
+      <created>1502024222223</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1502024222223</updated>
+    </task>
+    <task id="LOCAL-00003" summary="忽略文件">
+      <created>1502024642813</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1502024642813</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41494000" />
+    <option name="totallyTimeSpent" value="42239000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,9 +349,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18604651" sideWeight="0.47840908" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284091" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284091" sideWeight="0.5021142" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3284091" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3284091" sideWeight="0.49788582" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.4857143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284091" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -365,6 +374,7 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="BEK_SORT_TYPE" value="1" />
               <option name="RECENTLY_FILTERED_USER_GROUPS">
                 <collection />
               </option>
@@ -391,7 +401,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="配置环境变化！" />
     <MESSAGE value="bootstrap面板2" />
-    <option name="LAST_COMMIT_MESSAGE" value="bootstrap面板2" />
+    <MESSAGE value="忽略文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="忽略文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -402,14 +413,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootstrap_demo/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap_demo/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -473,7 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore.txt" />
     <entry file="file://$PROJECT_DIR$/02/01.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -502,14 +504,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../bootstrap/bootStrapAdmin01/login.html" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/codeStyleSettings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -999,6 +993,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="231" column="1" lean-forward="false" selection-start-line="231" selection-start-column="1" selection-end-line="231" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/ext.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
           <folding />
         </state>
       </provider>
