@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <meta http-equiv="Content-Type" Content="text/html;charset=UTF-8">
+    <title> js监听输入框值的即时变化onpropertychange、oninput</title>
+    <style type="text/css">
+        div {
+            position: absolute;
+            margin-left: 40px;
+            margin-top: 40px;
+            width: auto;
+            line-height: 30px;
+            border: 1px dashed;
+        }
+
+        div span {
+            font-size: 16px;
+            vertical-align: middle;
+        }
+
+        div input {
+            padding: 3px 9px;
+            border-radius: 5px;
+            border-style: solid;
+        }
+    </style>
+    <script type="text/javascript" src="../../jquery/jquery-1.7.js"></script>
+
+    <script type="text/javascript">
+        function myBrower() {
+            var userAgent = window.navigator.userAgent;//取得浏览器的userAgent字符串
+            var isOpear = userAgent.indexOf('Opear') > -1; //判断是否Opera浏览器
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MEIE") > -1 && !isOpear;//判断是否IE浏览器
+            var isFF = userAgent.indexOf("Firefox") > -1;//判断是否Firefox浏览器
+            var isSafari = userAgent.indexOf("Safari") > -1; //判断是否Safari浏览器
+            var isChrome = userAgent.indexOf("Chrome") > -1;//判断是否chrome浏览器
+            if (isIE) {
+                var IE55 = IE6 = IE7 = IE8 = false;
+                var reIE = new RegExp("MSIE(\d+\.\d+);");
+                alert(reIE);
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp['$1']);
+                IE55 = fIEVersion == 5.5;
+                IE6 = fIEVersion == 6.0;
+                IE7 = fIEVersion == 7.0;
+                IE8 = fIEVersion == 8.0;
+                IE9 = fIEVersion == 9.0;
+                if (IE55) {
+                    return "IE55";
+                }
+                if (IE6) {
+                    return "IE6";
+                }
+                if (IE7) {
+                    return "IE7";
+                }
+                if (IE8) {
+                    return "IE8";
+                }
+                if (IE9) {
+                    return "IE9";
+                }
+                return "IE";
+            }
+            if (isOpear) {
+                return "Opear";
+            }
+            if (isFF) {
+                return "FF";
+            }
+            if (isChrome) {
+                return "Chrome";
+            }
+            if (isSafari) {
+                return "Safari";
+            }
+        }
+        function immediately() {
+            var element = document.getElementById('mytext');
+            if (myBrower() == 'IE') {
+                element.onpropertychange = webChange;
+            } else {
+                element.addEventListener('input', webChange, false);
+            }
+            console.dir(element);
+            function webChange() {
+                if (element.value)
+                    document.getElementById("test").innerHTML = element.value;
+            }
+        }
+        //当整个文件流加载完成，才能取到document.getElementById('mytext')的值
+        $(function () {
+            immediately();
+        });
+    </script>
+</head>
+<body>
+<div>
+    <span>您输入的值为：</span>
+    <input type="text" name="textfield" id="mytext" placeholder="222"/>
+    <div>你输入的值：<span id="test"></span></div>
+</div>
+</body>
+</html>

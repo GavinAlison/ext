@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>航空工业四川泛华车间生产管理系统用户手册</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 等线;
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: DengXian;
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+        }
+
+        @font-face {
+            font-family: 宋体;
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: SimSun;
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: 3 680460288 22 0 262145 0;
+        }
+
+        body, h1, h2, h3, h4, div, ul, li, a, input, span, i, table, tr, td, label, form, img {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        span, label {
+            letter-spacing: 1px;
+        }
+
+        .level {
+            text-align: center;
+            font-family: 等线;
+            font-size: 29.3px;
+            line-height: 71px;
+        }
+
+        .level_end {
+            margin-top: 300px;
+            text-align: center;
+        }
+
+        .level_end ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+
+        .level_end ul li {
+            padding: 3px 0;
+        }
+
+        .level_end > ul > li > span {
+            font-family: 宋体;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 120%;
+        }
+
+        .one_level {
+            font-family: 宋体;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 3px;
+            margin-top: 20px;
+        }
+
+        .tow_level {
+            text-indent: 28px;
+        }
+
+        .three_level {
+            text-indent: 62px;
+        }
+
+        .firstRow {
+            padding: 4px 0;
+            padding-left: 28px;
+            text-align: justify;
+        }
+
+        .firstRow ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .firstRow ul li {
+            padding: 4px 0;
+        }
+
+        .firstRow > span > b {
+            font-family: 等线;
+            font-size: 15px;
+        }
+
+        .secondRow {
+            text-indent: 56px;
+        }
+
+        .threeRow {
+            margin-left: 56px;
+            text-indent: 0;
+        }
+
+        .div_img {
+            padding: 20px 0 0 0;
+            text-align: center;
+        }
+
+        .seven {
+            padding-left: 54px;
+        }
+
+        .sevenSec {
+            text-indent: 0;
+            padding-left: 82px;
+        }
+
+        .sevenSec ul {
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .yellowFlag {
+            background-color: #FFFF00;
+        }
+
+        .orgFlag {
+            color: #FF0000;
+        }
+
+        .ps {
+            text-indent: 28px;
+            margin-top: 10px;;
+        }
+    </style>
+</head>
+<body>
+<a name="homeA1"></a>
+<h1 class="level">
+    航空工业四川泛华
+</h1>
+<h1 class="level">
+    车间生产管理系统用户手册
+</h1>
+<div class="level_end">
+    <ul>
+        <li><span>北京机载中兴信息技术有限公司</span></li>
+        <li><span>二〇一七年八月七日</span></li>
+    </ul>
+</div>
+
+
+<h1 class="level"><a name="1"></a>一、分厂工艺用户</h1>
+<div class="one_level">
+    <a name="11"></a>1. 产品型号表
+</div>
+<div class="firstRow"><span>产品型号表是用于工艺员对产品基本信息进行维护的模块。</span></div>
+<div class="firstRow"><span><b>用户登录</b><label>：基础数据管理→产品型号表</label></span></div>
+<div class="firstRow"><span><b>操作：</b></span></div>
+<div class="firstRow"><span> 1) 【新建】：创建一个新的产品。点击“新建”按钮，填写产品型号、产品名称、产品编码等信息，点击保存完成产品的创建。
+</span></div>
+<div class="firstRow"><span> 2) 【删除】删除产品。选中需要删除的产品，点击删除按钮进行删除。
+</span></div>
+<div class="firstRow"><span> 3) 【查询面板】查询产品型号表。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：
+    产品型号、产品名称、产品编码、技术状态、产品级别等对产品型号表进行查询。
+</span></div>
+<div class="firstRow"><span> 4) 【导入模板】：导入产品的模板。点击导入模板，下载一个excel文件，在该文件中填写产品的信息就可完成批量导入产品型号表。
+</span></div>
+<div class="firstRow"><span> 5) 【批量导入】： 根据导入模板进行多条产品记录的导入。点击批量导入按钮，选择填写好的导入文件，点击确认即可完成批量导入。<label
+        class="yellowFlag">目前系统只支持导入模板大于等于二行的数据模板。</label>
+</span></div>
+<div class="firstRow"><span> 6) 【导出】：导出产品型号表。点击导出按钮，导出一个包含所有产品型号表的excel文件。不能选择性导出。
+</span></div>
+<div class="ps"><span>解释一下以下字段：
+</span></div>
+<div class="firstRow">
+    <ul>
+        <li><span><label class="orgFlag">1.技术状态</label>：技术状态/图样版次/阶段；</span></li>
+        <li><span>其中值有四种：C，S，D，P，F；</span></li>
+        <li><span><label class="orgFlag">2.计量单位</label>：由科研管理部进行维护的，科研管理部在系统管理的枚举项中可对计量单位进行修改和添加，一般分为台、个、件；</span>
+        </li>
+        <li><span><label class="orgFlag">3.产品型号与产品编码</label>：值可以一样，都可以作为唯一性，或者产品型号与技术状态 用作唯一性，他俩组合在一起就不能相同，产品型号可以相同，但是技术状态一定不能相同;</span>
+        </li>
+        <li><span><label class="orgFlag">4.产品级别</label>：现在系统中，产品级别是一级的。针对民品，产品级别是只分一级的。</span>
+        </li>
+        <li><span>对于军品，产品级别分很多级，比如，军方为一级，主机为二级，辅机为三级，</span>
+        </li>
+        <li><span>由科研管理部维护，同计量单位一样，分为一级、二级、三级</span>
+        </li>
+        <li><span><label class="orgFlag"> 5.产品类属</label>：同计量单位一样，一般分为海军、空军、陆航、火箭军、川西军检、外贸、民航</span>
+        </li>
+        <li><span><label class="orgFlag"> 6.图样版次</label>：主要用于产品投入</span>
+        </li>
+    </ul>
+</div>
+<div class="div_img"><img src="image/image001.jpg" alt="产品型号的新建与删除"/><br><span>图1 新建与删除</span></div>
+<div class="div_img"><img src="image/image002.jpg" alt="导出的产品清单excel"/><br><span>图2 导出的产品清单excel</span></div>
+<div class="div_img"><img src="image/image003.jpg" alt="导入模板"/><br><span>图3 导入模板</span></div>
+<div class="div_img"><img src="image/image004.jpg" alt="批量导入"/><br><span>图4 批量导入</span></div>
+
+<div class="one_level">
+    <a name="12"></a>2. 零组件表
+</div>
+<div class="firstRow"><span>零组件表是用于工艺员对零组件基本信息进行维护的模块。</span></div>
+<div class="firstRow"><span><b>用户登录</b><label>：基础数据管理→零组件表</label></span></div>
+<div class="firstRow"><span><b>操作：</b></span></div>
+<div class="firstRow"><span>1) 【新建】： 创建一个新的零组件。点击“新建”按钮，填写零组件代号、零组件名称、零组件编码等信息，点击保存完成零组件的创建。
+</span></div>
+<div class="firstRow"><span>2) 【删除】： 删除零组件。选中需要删除的零组件，点击删除按钮进行删除。</span></div>
+<div class="firstRow"><span>3) 【导入模板】：导入多条零组件记录的模板。点击导入模板，下载一个excel文件，在该文件中填写零组件表的信息就可完成批量导入零组件表。
+</span></div>
+<div class="firstRow"><span>4) 【批量导入】：根据导入模板进行多条零组件记录的导入。点击批量导入按钮，选择填写好的导入文件，点击确认即可完成批量导入。
+    <span class="yellowFlag">目前系统只支持导入模板大于等于二行的数据模板。</span></span></div>
+<div class="firstRow"><span>5) 【导出】：导出零组件表。点击导出按钮，下载一个包含所有零组件表的excel文件。不能选择性导出。</span></div>
+<div class="firstRow"><span>6) 【查询面板】：查询零组件。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：零组件型号、零组件名称、零组件编码、技术状态等对通知进行查询。</span></div>
+<div class="ps"><span>解释以下字段</span></div>
+<div class="firstRow">
+    <ul>
+        <li><span>1. 零组件类别：可以分为零件和组件；</span></li>
+        <li><span>2. 生产方式：自制、外购、外协;</span></li>
+        <li><span>3. 加工方式：普卡、壳体，普卡用于批量生产，壳体用于单件生产;</span></li>
+        <li><span>4. 配套类别：用于在BOM表的配套，有两种，专用件、标准件，在BOM表中，专用件又分为专有件和借用件;</span></li>
+        <li><span>5. 入库类别：可以入中央库、入在制品库、入其他库，还有入库提示，比如入其他库，入库提示是14k;</span></li>
+        <li><span>6. 生产单元：作为扩展性开发，因为中航工业现在在推广这个，所以保留，不需要填写;</span></li>
+    </ul>
+</div>
+<div class="div_img"><img src="image/image005.jpg" alt="零组件表界面"/><br><span>图5 零组件表界面</span></div>
+
+<div class="one_level">
+    <a name="13"></a>3. 产品BOM表
+</div>
+<div class="firstRow"><span>产品BOM表是用于工艺员对产品BOM进行维护的模块。</span></div>
+<div class="firstRow"><span><b>用户登录</b><label>：基础数据管理→产品BOM表</label></span></div>
+<div class="firstRow"><span><b>操作：</b></span></div>
+<div class="firstRow"><span>1) 【物料配套表】：创建一个新的物料配套。点击产品型号表中的选择列中的数字。在产品结构树中点击相应的产品型号，填写物料配套信息。</span></div>
+<div class="firstRow"><span>2) 【物料配套】：确定配套物料。在物料配套表中的物料代号框中选择好配套物料。</span></div>
+<div class="firstRow"><span>3) 【删除】：删除配套物料。点击删除按钮即可删除已有的配套物料。</span></div>
+<div class="firstRow"><span>4) 【新建同级配套】：新建与所在配套物料同级的物料。点击新建按钮即可开始新建配套物料。</span></div>
+<div class="firstRow"><span>5) 【新建子级配套】：新建所在配套物料子级的物料。点击新建按钮即可开始新建配套物料。子级配套是当前物料配套与子级的配套。</span></div>
+<div class="firstRow"><span>6) 【查询】：查询产品型号表。点击查询按钮在输入框内输入产品型号和产品名称即可查询。</span></div>
+<div class="firstRow"><span>7) 【生成全部产品分工明细表】：生成全部产品分工明细表。点击生成按钮即可生成全部产品分工明细表。主要用于生产投入，零组件投入。</span></div>
+<div class="ps"><span>说明以下字段：</span></div>
+<div class="firstRow">
+    <ul>
+        <li><span>1.  配套类型：专用件的零件或者组件（统称物料）在与其他产品与组件(统称父物料)进行配套时，可以选择专有件和借用件，一个物料只能是一个父物料的专有件，
+            可以是多个父物料的借用件。第二种情况，当一个物料是一个产品的借用件时，物料下的子物料跟产品的关系也是借用件的关系。</span>
+        </li>
+        <li><span>2.  生成全部产品分工明细表：这个表主要是用于生成投入。在对产品与零组件进行配套之后，有一个状态标识表示明细表是否生成，
+            红色表示配套表改变了，黑色表示没有改变。</span>
+        </li>
+        <div class="div_img"><img src="image/image006.jpg" alt="产品BOM表界面"/><br><span>图6 产品BOM表界面</span></div>
+    </ul>
+</div>
+
+<div class="one_level">
+    <a name="14"></a>4. 工艺路线表
+</div>
+<div class="firstRow"><span>工艺路线表是用于工艺员对工艺路线进行维护的模块。</span></div>
+<div class="firstRow"><span><b>用户登录</b><label>：基础数据管理→工艺路线表</label></span></div>
+<div class="firstRow"><span><b>操作：</b></span></div>
+<div class="firstRow">
+    <span>1)      【新建】：创建一条新的工艺路线数据。点击工艺路线表中的新建按钮，填写物料代号、物料名称、物料编码、技术状态、工艺路线版本号等相关信息，点击保存按钮完成新建。</span></div>
+<div class="firstRow"><span>2) 【删除】：删除工艺路线表。选择工序路线后点击删除按钮即可删除已有的工艺路线。</span></div>
+<div class="firstRow"><span>3) 【生效】：将工艺路线发布生效。选择工艺路线后点击生效按钮即可使工艺路线生效，才可让工时员编辑工时。</span></div>
+<div class="firstRow"><span>4) 【置编辑】：将生效的工艺路线置为可编辑状态。选择工艺路线后点击置编辑按钮即可将生效的工艺路线置为可编辑状态。</span></div>
+<div class="firstRow"><span>5) 【冻结】：将工艺路线失效。选择工艺路线后点击冻结按钮即可将工艺路线失效，同时不可编辑。点击生效或置编辑还可以将失效的工艺路线重新转换为可编辑状态。</span>
+</div>
+<div class="firstRow"><span>6) 【导出】：导出工艺路线表。点击导出按钮，下载一个包含所有工艺路线表的excel文件。</span></div>
+<div class="firstRow">
+    <span>7) 【查询面板】：查询工艺路线表。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：零组件代号、零组件名称、工艺路线版本号、工艺路线状态等对通知进行查询。</span></div>
+<div class="firstRow"><span>8) 【工序详情】：新建和查看工序具体情况。当工艺路线处于编辑状态时，点击工序详情按钮，在弹出的页面输入框中输入工序的基本信息。当工艺路线处于编辑状态时，点击工序详情按钮，在弹出的页面输入框中查看工序的相关情况。
+    工序信息包含工序类别，有加工工序和检验工序之分，<span class="yellowFlag">若选择检验工序，则该工序在完工后不需要做工序检验记录，</span>直接跳过。</span>
+</div>
+<div class="firstRow">
+    <span>9) 【工序检验项】：可以在产品的工序详细中对工序填写工序检验项，这里操作可以批量导入相应的工序检验项，导入时，必须在已有的工艺路线与工序号的前提下导入。用于产品检验。</span></div>
+
+<div class="ps"><span>说明以下字段：</span></div>
+<div class="firstRow">
+    <ul>
+        <li><span>1.       类别：工艺路线按照产品、组件与零件进行分类依次排列。</span>
+        </li>
+        <li><span>2.       工艺路线是生产投入的必须条件，工序详细是保证车间派工的依据。</span></li>
+    </ul>
+</div>
+<div class="div_img"><img src="image/image007.jpg" alt="工艺路线界面"/><br><span>图7 工艺路线界面</span></div>
+
+<div class="one_level">
+    <a name="15"></a>5. 业务通知
+</div>
+<div class="firstRow"><span>业务通知是新建信息通知和查看发布通知的模块。</span></div>
+<div class="firstRow"><span><b>用户登录</b><label>：基础数据管理→业务通知</label></span></div>
+<div class="firstRow"><span><b>操作：</b></span></div>
+<div class="firstRow"><span>1) 【新建】：创建一个新的业务通知。点击“新建”按钮，填写通知标题、通知内容、部门范围、角色范围等信息，点击保存完成业务通知的创建。当要发布时点击发布按钮完成业务通知的发布。
+</span></div>
+<div class="firstRow"><span>2) 【删除】：删除通知。选中需要删除的通知，点击删除按钮进行删除。</span></div>
+<div class="firstRow"><span>3) 【查询面板】：查询业务通知。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：通知标题、通知内容、发布人、发布时间、发布状态等
+    对通知进行查询。</span></div>
+<div class="div_img"><img src="image/image008.jpg" alt="新建业务通知"/><br><span>图8 新建业务通知</span></div>
+<div class="div_img"><img src="image/image009.jpg" alt="查询面板界面"/><br><span>图9 查询面板界面</span></div>
+
+<div class="one_level">
+    <a name="16"></a>6. 我的通知
+</div>
+<div class="firstRow"><span>我的通知是查看发布给自己通知的模块。</span></div>
+<div class="firstRow"><span><b>用户登录</b><label>：基础数据管理→我的通知</label></span></div>
+<div class="firstRow"><span><b>操作：</b></span></div>
+<div class="firstRow"><span>1)【查询】：查询业务通知。点击查询面板，在页面输入框中输入各种相关的信息如：通知标题、通知内容、发布人、发布时间等信息，点击查询按钮对通知进行查询。
+</span></div>
+<div class="firstRow"><span>2)【显示全部】：显示全部我的通知。点击显示全部按钮，显示全部我的通知。</span></div>
+<div class="div_img"><img src="image/image010.jpg" alt="查询界面"/><br><span>图10 查询界面</span></div>
+
+<div class="one_level one_level1">
+    <a name="17"></a>7. 车间生产管理
+</div>
+<div class="one_level tow_level">
+    <a name="171"></a>7.1 工时管理
+</div>
+<div class="one_level secondRow">
+    <a name="1711"></a>7.1.1 定额工时登记
+</div>
+<div class="firstRow seven"><span>定额工时登记是工艺员对定额工时、准备工时进行登记的管理模块。</span></div>
+<div class="firstRow seven"><span><b
+>用户登录</b><label>：车间生产管理→工时管理→定额工时登记</label></span></div>
+<div class="firstRow seven"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【查询面板】：查询定额工时。页面输入框中输入：零组件代号、零组件名称等对定额工时进行查询。</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【工时登记】：选定零组件点击工时登记能够编辑和查看定额工时、准备工时。
+    对工时进行登记时，相应的工艺路线状态会变成生效。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【生效】：登记完工时之后，对该工艺路线的工时进行生效操作，生效之后该工艺路线可以进行生产投入。
+    对生效的工时还可以进行置编辑操作。</span></div>
+
+<div class="div_img"><img src="image/image011.jpg" alt="定额工时查询界面"/><br><span>图11 定额工时查询界面</span></div>
+<div class="div_img"><img src="image/image012.jpg" alt="工时登记界面"/><br><span>图12 工时登记界面</span></div>
+
+
+<h1 class="level"><a name="2"></a>二、原材料保管员用户</h1>
+<div class="one_level">
+    <a name="21"></a>1. 信息沟通
+</div>
+<div class="one_level tow_level">
+    <a name="211"></a>1.1 业务通知
+</div>
+<div class="firstRow secondRow"><span>业务通知是新建信息通知和查看发布通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→业务通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【新建】： 创建一个新的业务通知。点击“新建”按钮，填写通知标题、通知内容、部门范围、角色范围等信息，
+    点击保存完成业务通知的创建。当要发布时点击发布按钮完成业务通知的发布。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【删除】： 删除通知。选中需要删除的通知，点击删除按钮进行删除。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【查询面板】：查询业务通知。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间、发布状态等对通知进行查询。
+</span></div>
+<div class="div_img"><img src="image/image013.jpg" alt="新建业务通知"/><br><span>图13 新建业务通知</span></div>
+<div class="div_img"><img src="image/image014.jpg" alt="查询面板界面"/><br><span>图14 查询面板界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="212"></a>1.2 我的通知
+</div>
+<div class="firstRow secondRow"><span>我的通知是查看发布给自己通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→我的通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【查询】： 查询业务通知。点击查询面板，在页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间等信息，点击查询按钮对通知进行查询。
+</span></div>
+<div class="firstRow  sevenSec"><span>2) 【显示全部】： 显示全部我的通知。点击显示全部按钮，显示全部我的通知。
+</span></div>
+<div class="div_img"><img src="image/image015.jpg" alt="查询界面"/><br><span>图15 查询界面</span></div>
+
+<div class="one_level">
+    <a name="22"></a>2. 车间生产管理
+</div>
+<div class="one_level tow_level">
+    <a name="221"></a>2.1 生产投入
+</div>
+<div class="one_level  three_level">
+    <a name="2211"></a>2.1.1 零组件缺件计划
+</div>
+<div class="firstRow seven sevenSec"><span>零组件缺件计划是对零组件缺件情况进行查询、导出、导入的模块。</span></div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →  零组件缺件计划</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【批量导入】：根据导入模板，进行零组件缺件计划的导入，可以得到生产过程中零组件的缺件的名称和库存数量，
+    以及每月缺件计划的数量；</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【查询】：点击“查询”按钮，就可以将零组件缺件计划按照年度、月份、零组件代号和加工单位条件查询出来；</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【导出】：点击“导出”按钮，就可以导出零组件缺件计划所有的记录。</span></div>
+<div class="div_img"><img src="image/image016.jpg" alt="批量导入零组件缺件计划界面"/><br><span>图16 批量导入零组件缺件计划界面</span></div>
+
+<div class="one_level  three_level">
+    <a name="2212"></a>2.1.2 零件投入
+</div>
+<div class="firstRow seven sevenSec"><span>零件投入是物资供应部人员根据计划对零件进行投入，并分派材料到车间，由车间分厂的保管员确定领料，
+    通过车间计划进行投入现场的模块。</span></div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →  零件投入</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【新建】： 创建一个新的施工卡(记录卡)片。点击“新建”按钮，填写产品型号、零组件代号、选择工艺路线版本号、总批次、
+    投入数量、日期等信息，点击保存完成施工卡(记录卡)片的创建。</span></div>
+<div class="firstRow seven sevenSec">
+    <ul>
+        <li>a).条件：只有在产品BOM维护中点击全部生成产品分工明细表，才可以选择到该产品下的零组件。</li>
+        <li>b).填写的方式有两种，一种可以先选择产品，再选择零组件代号；另一种可以先选择零组件代号，再选择产品型号。其中零组件与产品的关系只能是专有件。
+            工艺路线版本号。在先选择零件时，只有零件存在于BOM表中，且产品分工明细表不需要重新生成。在选择零件时，必须是类别为零件，生产方式为自制，
+            加工方式为普卡的零件表记录。
+        </li>
+    </ul>
+</div>
+<div class="firstRow seven sevenSec"><span>2) 【删除】： 删除施工卡(记录卡)片。选中需要删除的施工卡(记录卡)片，点击删除按钮进行删除。
+    <label class="yellowFlag">只能删除备料状态的施工卡(记录卡)。</label></span></div>
+<div class="firstRow seven sevenSec"><span>3)【导出】：导出施工卡(记录卡)片。点击导出按钮，下载一个包含所有施工卡(记录卡)片的excel文件。</span></div>
+<div class="firstRow seven sevenSec">
+    <span>4)【查询面板】：查询施工卡(记录卡)片。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：施工卡(记录卡)号、当前状态等对其进行查询。</span></div>
+<div class="firstRow seven sevenSec"><span>5)【打印工序流动卡】： 点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击打印工序流动卡。<label
+        class="yellowFlag">
+    需要有工艺版本号，工序详情信息，才能打印工序流动卡。当前期没有建立工艺版本号与工序详情时，后台建立之后，需要再次编辑施工卡(记录卡)并重新保存一下，
+    此时打印工序流动卡就不会没有数据。</label></span></div>
+
+<div class="div_img"><img src="image/image017.jpg" alt="查询界面"/><br><span>图17 新建零件投入界面</span></div>
+<div class="div_img"><img src="image/image018.jpg" alt="查询界面"/><br><span>图18 打印工序流动卡界面</span></div>
+<div class="div_img"><img src="image/image019.jpg" alt="查询界面"/><br><span>图19 查询面板界面</span></div>
+
+<div class="one_level  three_level">
+    <a name="2213"></a>2.1.3 组件投入
+</div>
+<div class="firstRow seven sevenSec"><span>组件投入是对组件投入进行管理的功能。</span></div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →  组件投入</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>
+    1)        【新建】： 创建一个新的施工卡(记录卡)片。点击“新建”按钮，可以先填写产品型号，再填写零组件代号，或者先填写零组件代号，再填写产品型号，然后选择工艺路线版本号、总批次、投入数量、日期等信息，点击保存完成施工卡(记录卡)片的创建。只有在产品BOM维护中点击全部生成产品分工明细表，才可以选择到该产品下的零组件。
+   <br> <label class="yellowFlag">组件投入没有材料，所以不需要填写材料信息。可点选的组件必须是BOM表中与产品配套成专有件的自制组件。</label></span>
+</div>
+<div class="firstRow seven sevenSec">
+    <span>2)        【删除】： 删除施工卡(记录卡)片。选中需要删除的施工卡(记录卡)片，点击删除按钮进行删除。只能删除备料状态的施工卡(记录卡)片。</span></div>
+<div class="firstRow seven sevenSec"><span>3)        【导出】：导出施工卡(记录卡)片。点击导出按钮，下载一个包含所有施工卡(记录卡)片的excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>4)        【查询面板】：查询施工卡(记录卡)片。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：施工卡(记录卡)号、当前状态等对其进行查询。</span>
+</div>
+<div class="firstRow seven sevenSec"><span>5)        【零件清单】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击零件清单，在弹出的界面中查看组件的零件清单。选择进入零件清单后，可以对零件清单的记录进行编辑和添加。</span>
+</div>
+<div class="firstRow seven sevenSec"><span>6)        【打印工序流动卡】： 点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击打印工序流动卡。<label
+        class="yellowFlag">
+    打印工序流动卡的前提是必须要有工艺版本号与工序详情信息。查看工序详情，可以点击施工卡(记录卡)编辑界面中的工艺路线版本号。</label></span>
+</div>
+<div class="firstRow seven sevenSec">
+    <span>7)        【打印零件清单】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击零件清单，在弹出的界面中，再点击打印清单，即可打印该组件下的零件清单。</span></div>
+
+<div class="div_img"><img src="image/image020.jpg" alt="组件投入界面"/><br><span>图20 组件投入界面</span></div>
+<div class="div_img"><img src="image/image021.jpg" alt="新建组件投入界面"/><br><span>图21 新建组件投入界面</span></div>
+<div class="div_img"><img src="image/image022.jpg" alt="零件清单界面"/><br><span>图22 零件清单界面</span></div>
+<div class="div_img"><img src="image/image023.jpg" alt="打印工序流动卡界面"/><br><span>图23 打印工序流动卡界面</span></div>
+<div class="div_img"><img src="image/image024.jpg" alt="查询界面"/><br><span>图24 查询面板界面</span></div>
+<div class="div_img"><img src="image/image025.jpg" alt="打印零件清单界面"/><br><span>图25 打印零件清单界面</span></div>
+
+<h1 class="level"><a name="3"></a>三、分厂保管用户</h1>
+<div class="one_level">
+    <a name="31"></a>1. 信息沟通
+</div>
+<div class="one_level tow_level">
+    <a name="311"></a>1.1 业务通知
+</div>
+<div class="firstRow secondRow"><span>业务通知是新建信息通知和查看发布通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→业务通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【新建】：创建一个新的业务通知。点击“新建”按钮，填写通知标题、通知内容、部门范围、角色范围等信息，
+    点击保存完成业务通知的创建。当要发布时点击发布按钮完成业务通知的发布。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【删除】：删除通知。选中需要删除的通知，点击删除按钮进行删除。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【查询面板】：查询业务通知。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间、发布状态等对通知进行查询。
+</span></div>
+<div class="div_img"><img src="image/image026.jpg" alt="新建业务通知"/><br><span>图26 新建业务通知</span></div>
+<div class="div_img"><img src="image/image027.jpg" alt="查询面板界面"/><br><span>图27 查询面板界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="312"></a>1.2 我的通知
+</div>
+<div class="firstRow secondRow"><span>我的通知是查看发布给自己通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→我的通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【查询】：查询业务通知。点击查询面板，在页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间等信息，点击查询按钮对通知进行查询。
+</span></div>
+<div class="firstRow  sevenSec"><span>2) 【显示全部】：显示全部我的通知。点击显示全部按钮，显示全部我的通知。
+</span></div>
+<div class="div_img"><img src="image/image028.jpg" alt="查询界面"/><br><span>图28 查询界面</span></div>
+
+<div class="one_level">
+    <a name="32"></a>2. 车间生产管理
+</div>
+<div class="one_level tow_level">
+    <a name="321"></a>2.1 生产投入
+</div>
+
+<div class="one_level three_level">
+    <a name="3211"></a>2.1.1 零组件缺件计划
+</div>
+<div class="firstRow seven sevenSec"><span>零组件缺件计划是对零组件缺件情况进行查询、导出、导入的模块。</span></div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →  零组件缺件计划</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>
+    1) 【批量导入】：根据导入模板，进行零组件缺件计划的导入，可以得到生产过程中零组件的缺件的名称和库存数量，以及每月缺件计划的数量；</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【查询】：点击“查询”按钮，就可以将零组件缺件计划按照年度、月份、零组件代号和加工单位条件查询出来；
+</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【导出】：点击“导出”按钮，就可以导出零组件缺件计划所有的记录。</span></div>
+<div class="div_img"><img src="image/image029.jpg" alt="打印零件清单界面"/><br><span>图29 批量导入零组件缺件计划界面</span></div>
+
+<div class="one_level three_level ">
+    <a name="3212"></a>2.1.2 零件投入
+</div>
+<div class="firstRow seven sevenSec"><span>零件投入是物资供应部人员根据计划对零件进行投入，并分派材料到车间，由车间分厂的保管员确定领料，通过车间计划进行投入现场的模块。</span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →  零件投入</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>
+    1.        【编辑】：编辑已有的施工卡(记录卡)片。点击“选择”下的数值按钮进入编辑页面，填写倒料日期，领料员信息，点击保存完成施工卡(记录卡)片的编辑。</span></div>
+<div class="firstRow seven sevenSec"><span>2. 【删除】：删除施工卡(记录卡)片。选中需要删除的施工卡(记录卡)片，点击删除按钮进行删除。
+    <label class="yellowFlag">只能删除备料状态的施工卡(记录卡)。</label></span></div>
+<div class="firstRow seven sevenSec"><span>3. 【导出】：导出施工卡(记录卡)片。点击导出按钮，下载一个包含所有施工卡(记录卡)片的excel文件。</span></div>
+<div class="firstRow seven sevenSec">
+    <span>4. 【查询面板】：查询施工卡(记录卡)片。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：施工卡(记录卡)号、当前状态等对其进行查询。</span></div>
+<div class="firstRow seven sevenSec"><span>5. 【打印工序流动卡】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击打印工序流动卡。<label
+        class="yellowFlag">需要有工艺版本号，工序详情信息，才能打印工序流动卡。
+当前期没有建立工艺版本号与工序详情时，后台建立之后，需要再次编辑施工卡(记录卡)并重新保存一下，此时打印工序流动卡就不会没有数据。</label></span></div>
+<div class="div_img"><img src="image/image030.jpg" alt="编辑零件投入界面"/><br><span>图30 编辑零件投入界面</span></div>
+<div class="div_img"><img src="image/image031.jpg" alt="打印工序流动卡界面"/><br><span>图31 打印工序流动卡界面</span></div>
+<div class="div_img"><img src="image/image032.jpg" alt="查询面板界面"/><br><span>图32 查询面板界面</span></div>
+
+<div class="one_level three_level">
+    <a name="3213"></a>2.1.3 组件投入
+</div>
+<div class="firstRow seven sevenSec"><span>组件投入是对组件投入进行管理的功能。</span></div>
+<div class="firstRow seven sevenSec"><span><b">用户登录</b><label>：车间生产管理 → 生产投入  →  组件投入</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>
+    1) 【编辑】： 编辑已有的施工卡(记录卡)片。点击“选择”下的数值按钮进入编辑界面，填写倒料日期和领料员信息，点击保存完成施工卡(记录卡)片的编辑。<label
+        class="yellowFlag">查看工序详情，可以点击施工卡(记录卡)编辑界面中的工艺路线版本号。组件编辑的材料信息不需要填写。</label></span>
+</div>
+<div class="firstRow seven sevenSec"><span>2) 【删除】： 删除施工卡(记录卡)片。选中需要删除的施工卡(记录卡)片，点击删除按钮进行删除。只能删除备料状态的施工卡(记录卡)片。</span>
+</div>
+<div class="firstRow seven sevenSec"><span>3) 【导出】：导出施工卡(记录卡)片。点击导出按钮，下载一个包含所有施工卡(记录卡)片的excel文件。</span></div>
+<div class="firstRow seven sevenSec">
+    <span>4) 【查询面板】：查询施工卡(记录卡)片。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：施工卡(记录卡)号、当前状态等对其进行查询。</span>
+</div>
+<div class="firstRow seven sevenSec"><span>5) 【零件清单】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击零件清单，在弹出的界面中查看组件的零件清单。选择进入零件清单后，可以对零件清单的记录进行编辑和添加。</span>
+</div>
+<div class="firstRow seven sevenSec"><span>6) 【打印工序流动卡】： 点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击打印工序流动卡。<label
+        class="yellowFlag">打印工序流动卡的前提是必须要有工艺版本号信息。</label></span>
+</div>
+<div class="firstRow seven sevenSec">
+    <span>7) 【打印零件清单】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击零件清单，在弹出的界面中，再点击打印清单，即可打印该组件下的零件清单。</span>
+</div>
+<div class="div_img"><img src="image/image033.jpg" alt="查询面板界面"/><br><span>图33 组件投入界面</span></div>
+<div class="div_img"><img src="image/image034.jpg" alt="查询面板界面"/><br><span>图34 编辑组件投入界面</span></div>
+<div class="div_img"><img src="image/image035.jpg" alt="查询面板界面"/><br><span>图35 打印工序流动卡界面</span></div>
+<div class="div_img"><img src="image/image036.jpg" alt="查询面板界面"/><br><span>图36 查询面板界面</span></div>
+<div class="div_img"><img src="image/image037.jpg" alt="查询面板界面"/><br><span>图37 打印零件清单界面</span></div>
+
+<h1 class="level"><a name="4"></a>四、分厂计划员用户</h1>
+<div class="one_level">
+    <a name="41"></a>1. 信息沟通
+</div>
+<div class="one_level tow_level">
+    <a name="411"></a>1.1 业务通知
+</div>
+<div class="firstRow secondRow"><span>业务通知是新建信息通知和查看发布通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→业务通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【新建】： 创建一个新的业务通知。点击“新建”按钮，填写通知标题、通知内容、部门范围、角色范围等信息，
+    点击保存完成业务通知的创建。当要发布时点击发布按钮完成业务通知的发布。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【删除】： 删除通知。选中需要删除的通知，点击删除按钮进行删除。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【查询面板】：查询业务通知。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间、发布状态等对通知进行查询。
+</span></div>
+<div class="div_img"><img src="image/image038.jpg" alt="新建业务通知"/><br><span>图38 新建业务通知</span></div>
+<div class="div_img"><img src="image/image039.jpg" alt="查询面板界面"/><br><span>图39 查询面板界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="412"></a>1.2 我的通知
+</div>
+<div class="firstRow secondRow"><span>我的通知是查看发布给自己通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→我的通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【查询】： 查询业务通知。点击查询面板，在页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间等信息，点击查询按钮对通知进行查询。
+</span></div>
+<div class="firstRow  sevenSec"><span>2) 【显示全部】： 显示全部我的通知。点击显示全部按钮，显示全部我的通知。
+</span></div>
+<div class="div_img"><img src="image/image040.jpg" alt="查询界面"/><br><span>图40 查询界面</span></div>
+
+<div class="one_level">
+    <a name="42"></a>2. 车间生产管理
+</div>
+<div class="one_level tow_level">
+    <a name="421"></a>2.1 生产投入
+</div>
+
+<div class="one_level three_level">
+    <a name="4211"></a>2.1.1 零组件缺件计划
+</div>
+<div class="firstRow seven sevenSec"><span>零组件缺件计划是对零组件缺件情况进行查询、导出、导入的模块。</span></div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →  零组件缺件计划</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span> 1) 【批量导入】：根据导入模板，进行零组件缺件计划的导入，可以得到生产过程中零组件的缺件的名称和库存数量，以及每月缺件计划的数量；</span>
+</div>
+<div class="firstRow seven sevenSec"><span>2) 【查询】：点击“查询”按钮，就可以将零组件缺件计划按照年度、月份、零组件代号和加工单位条件查询出来；</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【导出】：点击“导出”按钮，就可以导出零组件缺件计划所有的记录。</span></div>
+<div class="div_img"><img src="image/image041.jpg" alt="查询界面"/><br><span>图41 批量导入零组件缺件计划界面</span></div>
+
+<div class="one_level three_level">
+    <a name="4212"></a>2.1.2 零件投入
+</div>
+<div class="firstRow seven sevenSec"><span>零件投入是物资供应部人员根据计划对零件进行投入，并分派材料到车间，
+    由车间分厂的保管员确定领料，通过车间计划进行投入现场的模块。</span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →  零件投入</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span> 1. 【编辑】： 编辑已有的施工卡(记录卡)片。点击“选择”下的数值按钮进入编辑页面，填写工艺路线版本号、批次号、
+    分批次号、计划完成日期、计划交付数量、投产日期、计划员等信息，点击保存完成施工卡(记录卡)片的编辑。<label class="yellowFlag">点击工艺路线版本号，可以查看该工艺路线下的工序详情与工艺详情。
+        只有工艺路线状态和工时状态必须是生效，才可以投入现场。</label></span></div>
+<div class="firstRow seven sevenSec"><span> 2. 【删除】： 删除施工卡(记录卡)片。选中需要删除的施工卡(记录卡)片，点击删除按钮进行删除。
+    <label class="yellowFlag">只能删除备料状态的施工卡(记录卡)。</label></span></div>
+<div class="firstRow seven sevenSec"><span> 3. 【导出】：导出施工卡(记录卡)片。点击导出按钮，下载一个包含所有施工卡(记录卡)片的excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span> 4. 【查询面板】：查询施工卡(记录卡)片。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：施工卡(记录卡)号、
+    当前状态等对其进行查询。</span></div>
+<div class="firstRow seven sevenSec"><span> 5.【打印工序流动卡】： 点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击打印工序流动卡。<label
+        class="yellowFlag">需要有工艺版本号，
+    工序详情信息，才能打印工序流动卡。当前期没有建立工艺版本号与工序详情时，后台建立之后，需要再次编辑施工卡(记录卡)并重新保存一下，此时打印工序流动卡就不会没有数据。</label></span></div>
+<div class="firstRow seven sevenSec"><span>6. 【批次拆分】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，对施工卡(记录卡)片进行批次拆分。点击批次拆分按钮，
+    在弹出的批次拆分界面中填写相关信息进行批次拆分。<label
+            class="yellowFlag">只有施工卡(记录卡)处于投入现场、加工中才可以拆分批次。拆分数量不能大于投入数量。</label></span></div>
+
+<div class="div_img"><img src="image/image042.jpg" alt="查询界面"/><br><span>图42 编辑零件投入界面</span></div>
+<div class="div_img"><img src="image/image043.jpg" alt="查询界面"/><br><span>图43 打印工序流动卡界面</span></div>
+<div class="div_img"><img src="image/image044.jpg" alt="查询界面"/><br><span>图44 查询面板界面</span></div>
+<div class="div_img"><img src="image/image045.jpg" alt="查询界面"/><br><span>图45 批次拆分界面</span></div>
+
+
+<div class="one_level three_level ">
+    <a name="4213"></a>2.1.3 组件投入
+</div>
+<div class="firstRow seven sevenSec"><span>组件投入是对组件投入进行管理的功能。</span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →   组件投入</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1)  【编辑】： 编辑已有的施工卡(记录卡)片。点击“选择”下的数值按钮进入编辑界面，填写工艺版本号、
+    总批次号、分批次号、计划完成日期、计划交付数量、投入日期、计划员等信息，点击保存完成施工卡(记录卡)片的编辑。<label class="yellowFlag">查看工序详情，可以点击施工卡(记录卡)编辑界面中
+        的工艺路线版本号。编辑界面的材料信息不需要填写。只有工艺路线状态和工时状态必须是生效，才可以投入现场。</label></span></div>
+<div class="firstRow seven sevenSec"><span>2) 【删除】： 删除施工卡(记录卡)片。选中需要删除的施工卡(记录卡)片，点击删除按钮进行删除。<label
+        class="yellowFlag">只能删除备料状态的施工卡(记录卡)片。</label></span></div>
+<div class="firstRow seven sevenSec"><span>3) 【导出】：导出施工卡(记录卡)片。点击导出按钮，下载一个包含所有施工卡(记录卡)片的excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>4) 【查询面板】：查询施工卡(记录卡)片。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：施工卡(记录卡)号、
+    当前状态等对其进行查询。</span></div>
+<div class="firstRow seven sevenSec"><span>5)【零件清单】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击零件清单，在弹出的界面中查看组件的零件清单。选择进入零件清单后，
+    可以对零件清单的记录进行编辑和添加。</span></div>
+<div class="firstRow seven sevenSec"><span>6)【打印工序流动卡】： 点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，<label
+        class="yellowFlag">点击打印工序流动卡。打印工序流动卡的前提是必须要有工艺版本号信息。</label></span>
+</div>
+<div class="firstRow seven sevenSec">
+    <span>7)【打印零件清单】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，点击零件清单，在弹出的界面中，再点击打印清单，即可打印该组件下的零件清单。</span></div>
+<div class="firstRow seven sevenSec"><span>8)【批次拆分】：点击施工卡(记录卡)片，进入施工卡(记录卡)片界面，对施工卡(记录卡)片进行批次拆分。点击批次拆分按钮，在弹出的批次拆分界面中填写相关信息进行批次拆分。
+    <label class="yellowFlag">只有施工卡(记录卡)处于投入现场、加工中才可以拆分批次。拆分数量不能大于投入数量。</label></span></div>
+<div class="div_img"><img src="image/image046.jpg" alt="查询界面"/><br><span>图46 组件投入界面</span></div>
+<div class="div_img"><img src="image/image047.jpg" alt="查询界面"/><br><span>图47 编辑组件投入界面</span></div>
+<div class="div_img"><img src="image/image048.jpg" alt="查询界面"/><br><span>图48 打印工序流动卡界面</span></div>
+<div class="div_img"><img src="image/image049.jpg" alt="查询界面"/><br><span>图49 查询面板界面</span></div>
+<div class="div_img"><img src="image/image050.jpg" alt="查询界面"/><br><span>图50 打印零件清单界面</span></div>
+<div class="div_img"><img src="image/image051.jpg" alt="查询界面"/><br><span>图51 批次拆分</span></div>
+
+<div class="one_level three_level ">
+    <a name="4214"></a>2.1.4 批次拆分
+</div>
+<div class="firstRow seven sevenSec"><span>批次拆分是用于分厂计划员对生产批次进行拆分管理的模块。</span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →   批次拆分</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【新建】： 创建一个新的施工卡(记录卡)批次拆分。点击“新建”按钮，选择批次号、工序号、工序名称、拆分数量、分批次号、
+    日期等信息，点击保存完成施工卡(记录卡)批次拆分。</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【删除】： 删除施工卡(记录卡)批次拆分。选中需要删除项，点击删除按钮进行删除。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【导出】：导出施工卡(记录卡)批次拆分。点击导出按钮，下载一个包含所有施工卡(记录卡)批次拆分的excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>4) 【查询面板】： 查询批次拆分。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：批次号、分批次号等对其进行查询。</span></div>
+<div class="firstRow seven sevenSec"><span>5) 【打印】：点击施工卡(记录卡)批次拆分，进入施工卡(记录卡)批次拆分界面，对施工卡(记录卡)批次拆分进行打印。</span></div>
+<div class="div_img"><img src="image/image052.jpg" alt="查询界面"/><br><span>图52 批次拆分界面</span></div>
+<div class="div_img"><img src="image/image053.jpg" alt="查询界面"/><br><span>图53 新建批次拆分界面</span></div>
+<div class="div_img"><img src="image/image054.jpg" alt="查询界面"/><br><span>图54 打印批次拆分卡界面</span></div>
+
+<div class="one_level three_level ">
+    <a name="4215"></a>2.1.5 施工卡(记录卡)状态管理
+</div>
+<div class="firstRow seven sevenSec"><span>施工卡(记录卡)状态管理是分厂计划员对施工卡(记录卡)状态进行管理的模块。</span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →   施工卡状态管理</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【查询】： 查询施工卡状态信息。页面输入框中输入：施工卡(记录卡)号、批次号等信息对施工卡(记录卡)状态进行查询。
+   <label class="yellowFlag"> 可以查询出施工卡(记录卡)状态为投入现场，加工中和暂停的施工卡。</label></span></div>
+<div class="firstRow seven sevenSec"><span>2) 【导出】： 导出施工卡(记录卡)状态。点击导出按钮即可得到一个包含施工卡(记录卡)状态的Excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【暂停生产】： 暂停施工卡(记录卡)。点击施工卡按钮，进入施工卡(记录卡)状态管理界面，点击暂停生产。</span></div>
+<div class="firstRow seven sevenSec"><span>4) 【中止生产】： 中止施工卡(记录卡)。点击施工卡按钮，进入施工卡(记录卡)状态管理界面，点击中止生产。</span></div>
+<div class="firstRow seven sevenSec"><span>5) 【恢复生产】： 对于暂停生产或者中止生产的施工卡(记录卡)，可以恢复生产。</span></div>
+<div class="div_img"><img src="image/image055.jpg" alt="查询界面"/><br><span>图55 查询界面</span></div>
+<div class="div_img"><img src="image/image056.jpg" alt="查询界面"/><br><span>图56 施工卡(记录卡)状态管理界面</span></div>
+
+<div class="one_level">
+    <a name="422"></a>2.2 生产调度
+</div>
+<div class="one_level three_level">
+    <a name="4221"></a>2.2.1 任意派工
+</div>
+<div class="firstRow seven sevenSec"><span>任意派工是车间计划或者调度员对派工进行管理的模块。</span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →    任意派工</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【查询】： 查询施工卡(记录卡)号。页面输入框中输入：施工卡(记录卡)号、当前状态等信息对任意派工进行查询。
+    能查询出投入现场与加工中的施工卡(记录卡)。</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【导出】：导出任意派工。点击导出按钮即可得到一个包含任意派工的Excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【派工】：选择一个施工卡(记录卡)进行派工操作。在“施工卡(记录卡)信息”界面中进行中点击“派工”按钮，
+    在弹出的“生产派工”界面中进行派工操作。派工支持派工给多人，并且支持准备工时分给多人。对于工序类别是检验工序的，不用派工。在派工给工人时，
+    需要把工序准备指派给其中的人，如果没有，默认会工序准备指派给所选择的第一人。</span></div>
+<div class="div_img"><img src="image/image057.jpg" alt="查询界面"/><br><span>图57 查询界面</span></div>
+<div class="div_img"><img src="image/image058.jpg" alt="查询界面"/><br><span>图58 施工卡(记录卡)工序派工界面</span></div>
+<div class="div_img"><img src="image/image059.jpg" alt="查询界面"/><br><span>图59 生产派工界面</span></div>
+<div class="div_img"><img src="image/image060.jpg" alt="查询界面"/><br><span>图60 派工界面</span></div>
+
+<div class="one_level three_level ">
+    <a name="4222"></a>2.2.2 工序跨越
+</div>
+<div class="firstRow seven sevenSec"><span>工序跨越是用于生产计划与调度员对工序进行跨越操作管理的模块。
+    工序跨越是需要工艺人员在系统中进行工艺路线的变更的，由调度在系统中进行新工艺路线同步。</span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产投入  →    工序跨越</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec">
+    <span>1) 【查询】：查询施工卡(记录卡)号。页面输入框中输入：日期、产品型号对施工卡(记录卡)号进行查询。可以查询出投入现场与加工中的施工卡(记录卡)。</span></div>
+<div class="firstRow seven sevenSec">
+    <span>2) 【导出】：导出可以进行工序跨越的施工卡(记录卡)。点击“导出”按钮即可得到一个包含可以进行工序跨越的施工卡(记录卡)信息的Excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【跨越】：进行工序跨越。先勾选需要进行操作的工序，之后点击跨越按钮，在弹窗中进行选择是否进行跨越，跨越的工序不在进行检验。</span></div>
+<div class="div_img"><img src="image/image061.jpg" alt="查询界面"/><br><span>图61 工序跨越操作界面</span></div>
+
+<div class="one_level three_level">
+    <a name="4223"></a>2.2.3 工序转出
+</div>
+<div class="firstRow seven sevenSec"><span>工序跨越是用于生产计划与调度员对工序跨越进行操作管理的模块。
+    工序转出是用于计划员对工序需要外协至其他车间完成而进行的管理模块。</span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产调度 →  工序转出</label></span></div>
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【查询】：查询施工卡(记录卡)号。页面输入框中输入：施工卡(记录卡)号、当前状态对工序转出进行查询。</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【导出】：导出可用于工序转出的施工卡(记录卡)。点击导出按钮即可得到一个包含工序转出的Excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【转出】：进行工序转出。先勾选需要进行操作的工序和要转出的部门，之后点击转出按钮，在弹窗中进行选择是否进行转出。<br>
+对于转出到其他车间需要发布通知，通知其他车间进行加工处理。<br>
+对于转出到外协，不需要发布通知。</span></div>
+<div class="div_img"><img src="image/image062.jpg" alt="查询界面"/><br><span>图62 工序转出界面</span></div>
+<div class="div_img"><img src="image/image063.jpg" alt="查询界面"/><br><span>图63 转出到其他车间发布通知</span></div>
+<div class="div_img"><img src="image/image064.jpg" alt="查询界面"/><br><span>图64 查询界面</span></div>
+
+<div class="one_level three_level">
+    <a name="4224"></a>2.2.4 工序转入
+</div>
+<div class="firstRow seven sevenSec"><span>工序转入是用于分厂计划员对外协工序转入的管理模块。 </span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产调度 →  工序转入</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image065.jpg" alt="查询界面"/><br><span>图65 工序转入界面</span></div>
+
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【退回原车间】：将转入的工序退回原车间。选定要进行操作的工序，点击退回原车间按钮，
+    就可以将转入的工序退回原车间。这里只能选择一个工序进行退回原车间。退回原车间会发布通知到相应的车间。</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【工序派工】：对转入的工序进行派工。选定要进行派工操作的转入工序，点击工序派工，就可以进行工序派工。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【查询面板】：查询转入的工序。在输入框内输入施工卡(记录卡)号、零组件代号就可以对转入的工序进行查询。</span></div>
+<div class="div_img"><img src="image/image066.jpg" alt="查询界面"/><br><span>图66 工序派工界面</span></div>
+
+<div class="one_level three_level">
+    <a name="4225"></a>2.2.5 派工工序管理
+</div>
+<div class="firstRow seven sevenSec"><span
+>派工工序管理是计划员和工艺员对现场工艺进行调整的模块，并支持将现场工艺同步至主工艺路线。 </span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 生产调度 →  派工工序管理</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image067.jpg" alt="查询界面"/><br><span>图67 派工工序管理界面</span></div>
+
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【编辑】：选择一个施工卡(记录卡)号进入工艺路线界面，对工艺路线进行编辑，包括插入工序，删除工序，工序上移、
+    下移。已完工的工序不允许更改。对于拆分施工卡(记录卡)的工序背景显示为灰色。</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【同步工艺路线】：将主工艺路线同步至现场工艺，该工艺路线是由工艺员进行管理的。
+    主工艺路线是由工艺员进行维护的，现场工艺是车间现场进行管理的工艺路线。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【查询面板】：查询转入的工序。在输入框内输入施工卡(记录卡)号、零组件代号就可以对转入的工序进行查询。
+    可以查询出投入现场与加工中的施工卡(记录卡)。</span></div>
+
+<div class="div_img"><img src="image/image068.jpg" alt="查询界面"/><br><span>图68 派工工序编辑界面</span></div>
+<div class="div_img"><img src="image/image069.jpg" alt="查询界面"/><br><span>图69 在所选工序前插入工序界面</span></div>
+<div class="div_img"><img src="image/image070.jpg" alt="查询界面"/><br><span>图70 工序移动界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="423"></a>2.3 产品交付
+</div>
+
+<div class="one_level three_level">
+    <a name="4231"></a>2.3.1 零组件交付登记
+</div>
+<div class="firstRow seven sevenSec"><span>零组件交付登记是用于对零组件交付进行登记操作的模块。提供零组件交付登记功能，
+    显示可交付批次列表，提供零组件交付业务逻辑处理。 </span>
+</div>
+<div class="firstRow seven sevenSec"><span><b
+>用户登录</b><label>：车间生产管理 → 产品交付 → 零组件交付登记</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image071.jpg" alt="查询界面"/><br><span>图71 零组件交付登记界面</span></div>
+
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【查询面板】：查询零组件交付。页面输入框中输入：施工卡(记录卡)号、产品型号等对零组件交付记录进行查询。</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【导出】：导出零组件交付。点击导出按钮即可得到一个包含零组件交付的Excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【新增交付】：新增交付。选择需要开合格证的施工卡(记录卡)，点击按钮进入新增交付界面，填写相关信息点击保存完成新增交付。
+可进行部分交付。</span></div>
+<div class="firstRow seven sevenSec"><span>4) 【批量交付】：可对多个开合格证的施工卡(记录卡)进行批量交付。</span></div>
+
+<div class="one_level three_level">
+    <a name="4232"></a>2.3.2 零组件交付管理
+</div>
+<div class="firstRow seven sevenSec"><span>零组件交付管理提供对已交付信息的管理功能。 </span>
+</div>
+<div class="firstRow seven sevenSec"><span><b>用户登录</b>
+    <label>：车间生产管理 → 产品交付 → 零组件交付管理</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image072.jpg" alt="查询界面"/><br><span>图72 零组件交付管理界面</span></div>
+
+<div class="firstRow seven sevenSec"><span><b>操作：</b></span></div>
+<div class="firstRow seven sevenSec"><span>1) 【删除】：删除零组件交付单。选定要操作的零组件交付单，点击删除按钮，删除零组件交付单。
+当某条施工卡(记录卡)的交付记录已经入库，此时不能删除，也就该条记录前没有多选框。当该施工卡(记录卡)没有入库或者部分入库，此时没有入库的或者部分没有入库的可以删除。</span></div>
+<div class="firstRow seven sevenSec"><span>2) 【导出】：导出零组件交付单。点击导出按钮即可得到一个包含零组件交付单的Excel文件。</span></div>
+<div class="firstRow seven sevenSec"><span>3) 【打印】：打印零组件交付单。</span></div>
+
+<div class="div_img"><img src="image/image073.jpg" alt="查询界面"/><br><span>图73 零组件交付查询界面</span></div>
+<div class="div_img"><img src="image/image074.jpg" alt="查询界面"/><br><span>图74 打印界面</span></div>
+
+
+<h1 class="level"><a name="5"></a>五、工人用户</h1>
+<div class="one_level">
+    <a name="51"></a>1. 信息沟通
+</div>
+<div class="one_level tow_level">
+    <a name="511"></a>1.1 业务通知
+</div>
+<div class="firstRow secondRow"><span>业务通知是新建信息通知和查看发布通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→业务通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【新建】： 创建一个新的业务通知。点击“新建”按钮，填写通知标题、通知内容、部门范围、角色范围等信息，
+    点击保存完成业务通知的创建。当要发布时点击发布按钮完成业务通知的发布。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【删除】： 删除通知。选中需要删除的通知，点击删除按钮进行删除。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【查询面板】：查询业务通知。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间、发布状态等对通知进行查询。
+</span></div>
+<div class="div_img"><img src="image/image075.jpg" alt="新建业务通知"/><br><span>图75 新建业务通知</span></div>
+<div class="div_img"><img src="image/image076.jpg" alt="查询面板界面"/><br><span>图76 查询面板界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="512"></a>1.2 我的通知
+</div>
+<div class="firstRow secondRow"><span>我的通知是查看发布给自己通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→我的通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【查询】： 查询业务通知。点击查询面板，在页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间等信息，点击查询按钮对通知进行查询。
+</span></div>
+<div class="firstRow  sevenSec"><span>2) 【显示全部】： 显示全部我的通知。点击显示全部按钮，显示全部我的通知。
+</span></div>
+<div class="div_img"><img src="image/image077.jpg" alt="查询界面"/><br><span>图77 查询界面</span></div>
+<div class="one_level">
+    <a name="52"></a>2. 车间生产管理
+</div>
+<div class="one_level tow_level">
+    <a name="521"></a>2.1 车间检验
+</div>
+
+<div class="one_level three_level">
+    <a name="5211"></a> 2.1.1 工人交检
+</div>
+<div class="firstRow secondRow"><span>工序加工是车间工人填写加工数量的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：车间生产管理→车间检验→工人交检</label></span>，界面如下：
+</div>
+<div class="div_img"><img src="image/image078.jpg" alt="新建业务通知"/><br><span>图78 工人交检界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1)     【编辑】：工人对车间的工序进行填写数据。</span></div>
+<div class="div_img"><img src="image/image079.jpg" alt="新建业务通知"/><br><span>图79 工人填写交检界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="522"></a>2.2 工时管理
+</div>
+
+<div class="one_level three_level">
+    <a name="5221"></a> 2.2.1 个人工时查询
+</div>
+<div class="firstRow secondRow"><span>个人工时查询是用于对个人月工时进行查询操作的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：车间生产管理→ 工时管理→个人工时</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image080.jpg" alt="新建业务通知"/><br><span>图80 个人工时查询</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1)    【查询】：可以查询出个人哪年哪月的工时信息，只有检验员检验工人加工的工序并通过检验，
+    才可以把工序的准备工时或者加工工时算给工人。</span></div>
+
+<h1 class="level"><a name="6"></a>六、分厂检验用户</h1>
+<div class="one_level">
+    <a name="61"></a>1. 信息沟通
+</div>
+<div class="one_level tow_level">
+    <a name="611"></a>1.1 业务通知
+</div>
+<div class="firstRow secondRow"><span>业务通知是新建信息通知和查看发布通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→业务通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【新建】： 创建一个新的业务通知。点击“新建”按钮，填写通知标题、通知内容、部门范围、角色范围等信息，
+    点击保存完成业务通知的创建。当要发布时点击发布按钮完成业务通知的发布。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【删除】： 删除通知。选中需要删除的通知，点击删除按钮进行删除。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【查询面板】：查询业务通知。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间、发布状态等对通知进行查询。
+</span></div>
+<div class="div_img"><img src="image/image081.jpg" alt="新建业务通知"/><br><span>图81 新建业务通知</span></div>
+<div class="div_img"><img src="image/image082.jpg" alt="查询面板界面"/><br><span>图82 查询面板界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="612"></a>1.2 我的通知
+</div>
+<div class="firstRow secondRow"><span>我的通知是查看发布给自己通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→我的通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【查询】： 查询业务通知。点击查询面板，在页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间等信息，点击查询按钮对通知进行查询。
+</span></div>
+<div class="firstRow  sevenSec"><span>2) 【显示全部】： 显示全部我的通知。点击显示全部按钮，显示全部我的通知。
+</span></div>
+<div class="div_img"><img src="image/image083.jpg" alt="查询界面"/><br><span>图83 查询界面</span></div>
+<div class="one_level">
+    <a name="62"></a>2. 车间生产管理
+</div>
+<div class="one_level tow_level">
+    <a name="621"></a>2.1 车间检验
+</div>
+<div class="one_level three_level">
+    <a name="6211"></a>2.1.1 工序检验登记
+</div>
+<div class="firstRow secondRow"><span>工序检验登记是车间检验员用于对工序检验结果进行记录的模块。</span></div>
+<div class="firstRow secondRow  threeRow"><span><b
+>用户登录</b><label>：车间生产管理→ 车间检验→工序检验登记</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image084.jpg" alt="新建业务通知"/><br><span>图84 工序检验登记界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询】：查询工序检验登记。页面输入框中输入：施工卡(记录卡)号、产品型号等对工序检验登记的施工卡(记录卡)进行查询。</span></div>
+<div class="firstRow seven sevenSec">
+    <ul>
+        <li>
+            a) 当某道施工卡(记录卡)前出现太阳图标时，表示此道施工卡(记录卡)现在距离计划交付日期不到15天，
+            需要紧急处理；到出现月亮时，表示距离计划交付日期不到30天，需要依次处理。
+        </li>
+    </ul>
+</div>
+<div class="firstRow  sevenSec"><span>2) 【导出】：导出工序检验登记的施工卡(记录卡)。点击“导出”按钮即可得到一个包含工序检验信息的施工卡(记录卡)的Excel文件。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【检验】：对工序进行检验。点击施工卡(记录卡)进入工序检验登记界面，点击检验按钮，在出现的空格中填写相关检验的信息，
+    点击保存完成检验。<label class="yellowFlag"> 若为本人返工返修，可以双击姓名一列，继续填写返工返修工序检验记录，</label>若为他人返工返修，则需重新派工。</span>
+</div>
+<div class="firstRow seven sevenSec">
+    <ul>
+        <li>a) 当是车间检验员进行检验时，必须是检验自己车间的工序，对于品质部下派的检验员可以对所有车间的工序进行检验。</li>
+        <li>b) 后道工序的可加工数为前道工序的可用数量之和，前道工序的可用数量之和为检验合格数加上超差代用数量。</li>
+        <li>c) 当某道工序的加工类型为正常加工的可用数量之和与这个工序的可加工数相等时，此时这道工序完成加工与检验，
+            在“可加工数”之前有对勾，来表示加工与检验完成。可以点击对勾，查询此道工序的派工记录与检验信息。
+        </li>
+        <li>d) 当某道工序的加工类型为正常加工的可用数量之和与这个工序的可加工数不相等时，此时用叹号来表示此道工序有问题，
+            可以点击叹号来查看此道工序的派工记录与检验信息。
+        </li>
+        <li>e) 检验出现废品数时，填写废品数，系统自动创建相关的废品记录，关于废品单的管理到模块废品单管理中处理。</li>
+    </ul>
+</div>
+<div class="div_img"><img src="image/image085.jpg" alt="查询界面"/><br><span>图85 检验登记界面</span></div>
+<div class="div_img"><img src="image/image086.jpg" alt="查询界面"/><br><span>图86 填写检验数据界面</span></div>
+<div class="div_img"><img src="image/image087.jpg" alt="查询界面"/><br><span>图87 管理员删除检验记录界面</span></div>
+
+<div class="one_level three_level">
+    <a name="6212"></a>2.1.2 工序检验查询
+</div>
+<div class="firstRow secondRow"><span>工序检验查询是用于对工序检验结果进行查询的模块。</span></div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→ 车间检验→工序检验查询</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image088.jpg" alt="新建业务通知"/><br><span>图88 工序检验查询界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询】：查询工序检验结果。页面输入框中输入：施工卡(记录卡)号、产品型号等对工序检验结果进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【导出】导出工序检验记录。点击“导出”按钮即可得到一个包含工序检验记录的Excel文件</span></div>
+
+<div class="one_level three_level ">
+    <a name="6213"></a>2.1.3 废品单管理
+</div>
+<div class="firstRow secondRow threeRow"><span>废品单管理是对废品单进行管理操作的模块。包括开出废品单，废品工时记录废品单状态管理，提供废品单打印功能。</span>
+</div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→ 车间检验→废品单管理</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image089.jpg" alt="新建业务通知"/><br><span>图89 废品单管理界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询】：查询废品单。页面输入框中输入：施工卡(记录卡)号、产品型号等对废品单进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【导出】：导出废品单信息。点击导出按钮即可得到一个包含废品单的Excel文件。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【开具废品单】：选择生成的废品单，点击开具废品单进行废品单填写界面。</span></div>
+<div class="firstRow  sevenSec"><span>4) 【打印】：打印废品处置单。</span></div>
+<div class="firstRow  sevenSec"><span>本系统不对废品单进行流程处理，只具有开具废品单的功能并打印出来。</span></div>
+<div class="div_img"><img src="image/image090.jpg" alt="新建业务通知"/><br><span>图90 开具废品单1</span></div>
+<div class="div_img"><img src="image/image091.jpg" alt="新建业务通知"/><br><span>图91 开具废品单2</span></div>
+
+
+<div class="one_level three_level">
+    <a name="6214"></a>2.1.4 废品单查询
+</div>
+<div class="firstRow secondRow"><span>废品单查询可用于查询已开废品单情况、数量、状态。</span></div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→ 车间检验→废品单查询</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image092.jpg" alt="新建业务通知"/><br><span>图92 废品单管理界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询】：查询废品单。页面输入框中输入：施工卡(记录卡)号、产品型号等对废品单进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【导出】：导出废品单信息。点击导出按钮即可得到一个包含废品单的Excel文件。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【打印】：打印废品处置单。</span></div>
+<div class="div_img"><img src="image/image093.jpg" alt="新建业务通知"/><br><span>图93 废品处置单</span></div>
+<div class="div_img"><img src="image/image094.jpg" alt="新建业务通知"/><br><span>图94 废品单打印</span></div>
+
+<div class="one_level tow_level">
+    <a name="622"></a>2.2 产品交付
+</div>
+<div class="one_level three_level">
+    <a name="6221"></a>2.2.1 合格证登记
+</div>
+<div class="firstRow secondRow threeRow"><span>合格证登记是用于对合格证进行登记操作的模块。提供开合格证功能，显示可开合格证批次列表，提供开合格证业务逻辑处理。
+    自动生产合格证流水号。</span></div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→ 产品交付→合格证登记</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image095.jpg" alt="新建业务通知"/><br><span>图95 合格证登记界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询面板】： 查询合格证。页面输入框中输入：施工卡(记录卡)号、产品型号等对合格证进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【导出】：导出合格证。点击导出按钮即可得到一个包合格证的Excel文件。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【新开合格证】：新开合格证。选择需要开合格证的施工卡(记录卡)，点击按钮进入新开合格证界面，
+    填写相关信息点击保存完成新开合格证。<label class="yellowFlag"> 不能批量开具合格证，所以每条记录前是单选框(圆点)。</label></span></div>
+<div class="div_img"><img src="image/image096.jpg" alt="新建业务通知"/><br><span>图96 开具合格证界面</span></div>
+
+<div class="one_level three_level ">
+    <a name="6222"></a>2.2.2 合格证管理
+</div>
+<div class="firstRow secondRow"><span>合格证管理是对已开合格证查询管理的模块。</span></div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→ 产品交付→合格证管理</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image097.jpg" alt="新建业务通知"/><br><span>图97 合格证管理界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【删除】：删除合格证。选定要操作的合格证，点击删除按钮，删除合格证。只有该零组件的加工数量大于已交付数量，
+    就可以进行删除，把该零组件退回至未开具合格证的状态。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【导出】：导出合格证。点击导出按钮即可得到一个包含合格证的Excel文件。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【合格证查询】：合格证查询。点击合格证，进入合格证查询界面。</span></div>
+<div class="firstRow  sevenSec"><span>4) 【打印】：打印合格证。点击某条详细的合格证记录，在详细页面可以点击打印，打印该合格证。</span></div>
+<div class="div_img"><img src="image/image098.jpg" alt="新建业务通知"/><br><span>图98 合格证查询界面</span></div>
+<div class="div_img"><img src="image/image099.jpg" alt="新建业务通知"/><br><span>图99 打印零组件合格证界面</span></div>
+
+<h1 class="level"><a name="7"></a>七、中央库保管员用户</h1>
+<div class="one_level">
+    <a name="71"></a>1. 信息沟通
+</div>
+<div class="one_level tow_level">
+    <a name="711"></a>1.1 业务通知
+</div>
+<div class="firstRow secondRow"><span>业务通知是新建信息通知和查看发布通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→业务通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【新建】： 创建一个新的业务通知。点击“新建”按钮，填写通知标题、通知内容、部门范围、角色范围等信息，
+    点击保存完成业务通知的创建。当要发布时点击发布按钮完成业务通知的发布。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【删除】： 删除通知。选中需要删除的通知，点击删除按钮进行删除。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【查询面板】：查询业务通知。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间、发布状态等对通知进行查询。
+</span></div>
+<div class="div_img"><img src="image/image100.jpg" alt="新建业务通知"/><br><span>图100 新建业务通知</span></div>
+<div class="div_img"><img src="image/image101.jpg" alt="查询面板界面"/><br><span>图101 查询面板界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="712"></a>1.2 我的通知
+</div>
+<div class="firstRow secondRow"><span>我的通知是查看发布给自己通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→我的通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【查询】： 查询业务通知。点击查询面板，在页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间等信息，点击查询按钮对通知进行查询。
+</span></div>
+<div class="firstRow  sevenSec"><span>2) 【显示全部】： 显示全部我的通知。点击显示全部按钮，显示全部我的通知。
+</span></div>
+<div class="div_img"><img src="image/image102.jpg" alt="查询界面"/><br><span>图102 查询界面</span></div>
+<div class="one_level">
+    <a name="72"></a>2. 车间生产管理
+</div>
+
+<div class="one_level tow_level">
+    <a name="721"></a>2.1 产品交付
+</div>
+<div class="one_level three_level">
+    <a name="7211"></a>2.1.1 入库检验
+</div>
+<div class="firstRow secondRow"><span>入库检验是用于库房人员对零组件交付情况进行入库管理的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：车间生产管理→ 产品交付→入库检验</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image103.jpg" alt="新建业务通知"/><br><span>图103 入库检验界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【导出】：导出产品入库检验表。点击导出按钮即可得到一个库检状态为库检中和已入库的的产品入库检验表的Excel文件。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【查询面板】： 查询入库检验。页面输入框中输入：合格证编号、施工卡(记录卡)号等对入库检验表进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【入库信息编辑】： 进入入库信息编辑页面填写相应信息，保存入库。</span></div>
+<div class="firstRow  sevenSec"><span>当入库数量与提交数量相等时，库检状态为已入库；当没有入库数量时，库检状态为等待库检；
+    当入库数量小于提交数时，库检状态为库检中。</span></div>
+<div class="div_img"><img src="image/image104.jpg" alt="新建业务通知"/><br><span>图104 入库信息编辑界面</span></div>
+
+
+<h1 class="level"><a name="8"></a>八、工时管理员用户</h1>
+<div class="one_level">
+    <a name="81"></a>1. 信息沟通
+</div>
+<div class="one_level tow_level">
+    <a name="811"></a>1.1 业务通知
+</div>
+<div class="firstRow secondRow"><span>业务通知是新建信息通知和查看发布通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→业务通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【新建】： 创建一个新的业务通知。点击“新建”按钮，填写通知标题、通知内容、部门范围、角色范围等信息，
+    点击保存完成业务通知的创建。当要发布时点击发布按钮完成业务通知的发布。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【删除】： 删除通知。选中需要删除的通知，点击删除按钮进行删除。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【查询面板】：查询业务通知。点击查询面板，在弹出的页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间、发布状态等对通知进行查询。
+</span></div>
+<div class="div_img"><img src="image/image105.jpg" alt="新建业务通知"/><br><span>图105 新建业务通知</span></div>
+<div class="div_img"><img src="image/image106.jpg" alt="查询面板界面"/><br><span>图106 查询面板界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="812"></a>1.2 我的通知
+</div>
+<div class="firstRow secondRow"><span>我的通知是查看发布给自己通知的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：基础数据管理→我的通知</label></span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span> 1) 【查询】： 查询业务通知。点击查询面板，在页面输入框中输入各种相关的信息如：通知标题、通知内容、
+    发布人、发布时间等信息，点击查询按钮对通知进行查询。
+</span></div>
+<div class="firstRow  sevenSec"><span>2) 【显示全部】： 显示全部我的通知。点击显示全部按钮，显示全部我的通知。
+</span></div>
+<div class="div_img"><img src="image/image107.jpg" alt="查询界面"/><br><span>图107 查询界面</span></div>
+
+<div class="one_level">
+    <a name="82"></a>2. 工时管理
+</div>
+<div class="one_level tow_level">
+    <a name="821"></a>2.1 定额工时登记
+</div>
+<div class="firstRow secondRow"><span>定额工时登记是工时员对定额工时、准备工时进行登记的管理模块。</span></div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→工时管理→定额工时登记</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image108.jpg" alt="查询界面"/><br><span>图108 定额工时登录界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询面板】： 查询定额工时。页面输入框中输入：零组件代号、零组件名称等对定额工时进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【工时登记】：选定零组件点击工时登记能够编辑和查看定额工时、准备工时。</span></div>
+<div class="div_img"><img src="image/image109.jpg" alt="查询界面"/><br><span>图109 定额工时查询界面</span></div>
+<div class="div_img"><img src="image/image110.jpg" alt="查询界面"/><br><span>图110 工时登记界面</span></div>
+
+<div class="one_level tow_level">
+    <a name="822"></a>2.2 返工返修工时
+</div>
+<div class="firstRow secondRow threeRow"><span>返工返修工时是工时员对返工返修工时进行管理操作的模块。依据返工返修检验记录，分配返工返修工时数量，指定返工返修正负工时相关责任人，系统提示正负工时之和是否为零。</span>
+</div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→工时管理→返工返修工时</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image111.jpg" alt="查询界面"/><br><span>图111 返修返工工时管理界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询面板】： 查询返工返修工时。页面输入框中输入：零组件代号、零组件名称等对返工返修工时进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【新建】：新建工人返工返修工时记录，填写工时类别、工时数，点击保存。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【删除】：删除相应的返修返工的工时记录。</span></div>
+<div class="div_img"><img src="image/image112.jpg" alt="查询界面"/><br><span>图112 返修返工工时管理界面</span></div>
+<div class="div_img"><img src="image/image113.jpg" alt="查询界面"/><br><span>图113 编辑返修返工工时界面</span></div>
+
+
+<div class="one_level tow_level">
+    <a name="823"></a>2.3 报废工时
+</div>
+<div class="firstRow secondRow threeRow"><span>报废工时是用于工时员对报废工时进行管理操作的模块。依据检验员开具的废品单，分配报废工时数量，
+    指定报废正负工时相关责任人，系统提示正负工时之和是否为零，标志处理是否结束。</span></div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→工时管理→报废工时</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image114.jpg" alt="查询界面"/><br><span>图114 报废工时界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询面板】： 查询报废工时。页面输入框中输入：零组件代号、零组件名称等对返工返修工时进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【新建】：新建报废工时记录，填写工人、工时类别、工时数，点击保存。</span></div>
+<div class="div_img"><img src="image/image115.jpg" alt="查询界面"/><br><span>图115 报废工人工时记录</span></div>
+
+<div class="one_level tow_level">
+    <a name="824"></a>2.4 其他工时
+</div>
+<div class="firstRow secondRow"><span>其他工时是用于工时员对其他管理类工时进行分配的模块。</span></div>
+<div class="firstRow secondRow"><span><b>用户登录</b><label>：车间生产管理→工时管理→其他工时</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image116.jpg" alt="查询界面"/><br><span>图116 其他工时界面</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 【查询面板】： 查询其他工时。页面输入框中输入：零组件代号、零组件名称等对其他工时进行查询。</span></div>
+<div class="firstRow  sevenSec"><span>2) 【新建】：新建其他工时记录，填写工人、工时类别、工时数，点击保存。</span></div>
+<div class="firstRow  sevenSec"><span>3) 【删除】：对相应的工时记录进行删除。</span></div>
+<div class="div_img"><img src="image/image308.jpg" alt="查询界面"/><br><span>图117 其他工时维护</span></div>
+
+<div class="one_level tow_level">
+    <a name="825"></a>2.5 车间工时查询
+</div>
+<div class="firstRow secondRow threeRow">
+    <span>车间工时查询实现实时统计查询分厂月总工时、人员月总工时，可查看人员工时明细。</span></div>
+<div class="firstRow secondRow threeRow"><span><b
+>用户登录</b><label>：车间生产管理→工时管理→车间工时查询</label></span>，界面如下图所示：
+</div>
+<div class="div_img"><img src="image/image309.jpg" alt="查询界面"/><br><span>图309 车间工时查询</span></div>
+<div class="firstRow secondRow"><span><b>操作：</b></span></div>
+<div class="firstRow  sevenSec"><span>1) 车间工时查询支持按月份、车间、姓名、工号、工种查询。</span></div>
+
+
+</body>
+</html>

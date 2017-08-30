@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>及时验证-js实时验证input内容变化|文本框变化监听|oninput & onpropertychange</title>
+    <style>
+        #error{
+            color:red;
+            font-weight:bold;
+        }
+    </style>
+    <script type="text/javascript">
+        // Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
+        function OnInput (event) {
+            //alert ("The new content: " + event.target.value);
+            var value = event.target.value;
+            checkusername(value);
+        }
+        // Internet Explorer
+        function OnPropChanged (event) {
+            //evnet事件， event.srcElement存储了当前输入框的值
+            //srcLElement的attribute[5]存储了input的属性与值
+            console.info(event);
+            if (event.propertyName.toLowerCase () == "value") {
+                var value = event.srcElement.value;
+                checkusername(value);
+            }
+        }
+        //验证用户名方法(只能是数字字母和中文，不能包括特殊字符)
+        function checkusername(value){
+            var regex = /^[0-9a-zA-Z\u4e00-\u9fa5]*$/;
+            if(regex.test(value) == true){
+                //格式正确
+                document.getElementById("error").innerHTML+="哈哈-";
+            }else{
+                //格式错误
+                document.getElementById("error").innerHTML="用户名格式错误，用户名由数字、字母、中文组成，不能包含特殊字符";
+            }
+        }
+//        $('input[name="username"]').bind('input propertychange', function() {
+//            checkusername($(this).val());
+//        });
+    </script>
+</head>
+<body>
+请输入用户名：
+<input name="username" type="text" oninput="OnInput(event)" onpropertychange="OnPropChanged (event)" placeholder="数字、字母、汉字" /><label id="error"></label>
+</body>
+</html>
